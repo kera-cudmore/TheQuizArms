@@ -80,7 +80,9 @@ Google Fonts was used to import the chosen fonts for use in the site.
 
 Wireframes were created for mobile, tablet and desktop using balsamiq.
 
-![Home page]()
+![Home Page]()
+![Game Page]()
+![High Scores Page]()
 
 ### Features
 
@@ -134,6 +136,8 @@ HTML, CSS, Javascript
 * [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
 
 * [Shields.io](https://shields.io/) To add badges to the README
+
+* [Open Trivia DataBase](https://opentdb.com/) - API used for the trivia questions.
 
 - - -
 
