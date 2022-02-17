@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Quicksand:wght@400;500;700&display=swap');
+
+:root {
+    background-color: #413620;
+}
+
+h1 {
+    font-family: 'Croissant One', cursive;
+    font-size: 5rem;
+    color: bisque;
+    text-align: center;
+}
+
+#game-area {
+    background-color: antiquewhite;
+    width: 80%;
+}
+
