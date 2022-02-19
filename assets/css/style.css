@@ -8,9 +8,9 @@
 }
 /* Background image added to the body with a backup colour in case the image cannot load */
 body {
-background-image: url("../images/bar.webp");
+background-image: url("../images/bar1.webp");
 background-color: #000;
-background-size: 100%;
+background-size: cover;
 }
 
 /* Flex container */
@@ -32,12 +32,13 @@ h1 {
     font-style: italic;
     color: #f5f5f5;
     text-align: center;
+    text-shadow: 10px 10px 10px #a50c3c;
 }
 
 /* Game area */
 #game-area {
     background-color: #292929;
-    opacity: 0.8;
+    opacity: 0.9;
     width: 60%;
     margin: 0 auto;
     padding: 3rem;
@@ -62,6 +63,7 @@ button {
     font-size: 2rem;
     font-weight: 400;
     padding: 0.75rem 0;
-    background-color: #d86629;
-    border: #8A4119;
+    background-color: #000;
+    border-radius: 1rem;
+    color: #f5f5f5;
 }
