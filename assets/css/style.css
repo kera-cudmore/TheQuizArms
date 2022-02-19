@@ -1,18 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Quicksand:wght@400;500;700&display=swap');
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,700&family=MedievalSharp&family=Quicksand:wght@400;500;700&display=swap');
 
-:root {
-    background-color: #413620;
+/* Removes all margins & Padding on everything so they can be fully customised */
+* {
+    padding: 0;
+    margin: 0;
+}
+/* Background image added to the body with a backup colour in case the image cannot load */
+body {
+background-image: url("../images/bar.webp");
+background-color: #000;
+background-size: 100%;
 }
 
+/* Flex container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+
+}
+
+/* Page Title */
 h1 {
-    font-family: 'Croissant One', cursive;
-    font-size: 5rem;
-    color: bisque;
+    font-family: 'Almendra', serif;
+    font-size: 8rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #f5f5f5;
     text-align: center;
 }
 
+/* Game area */
 #game-area {
-    background-color: antiquewhite;
-    width: 80%;
+    background-color: #292929;
+    opacity: 0.8;
+    width: 60%;
+    margin: 0 auto;
+    padding: 3rem;
+    color: #f5f5f5;
 }
 
+#question {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+#choices {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 0.75rem 0;
+    background-color: #d86629;
+    border: #8A4119;
+}
