@@ -230,6 +230,8 @@ I also went through each page using google chrome developer tools to ensure that
 
 ### Media
 
+[Page background image of a pub](https://pixabay.com/photos/bar-pub-cafe-establishment-stools-2209813/)
+
 ### Acknowledgments
 
 I would like to acknowledge the following people who helped me along the way in completing this project:
