@@ -31,17 +31,30 @@
     <h1>THE QUIZ ARMS</h1>
 
 <div class="container"> 
-        <div id="game-area">
+        <div id="outer-container">
 
-        <h2 id="question">This is Where the Question will go </h2>
+            <div class="difficulty">
 
-            <div id="choices">
-            <button>Answer 1</button>
-            <button>Answer 2</button>
-            <button>Answer 3</button>
-            <button>Answer 4</button>
+                <h2 class="container-title">Select your difficulty</h2>
+
+                <div class="difficulty-btns">
+                <button id="easy">Easy</button>
+                <button id="medium">Medium</button>
+                <button id="hard">Hard</button>
+                </div>
             </div>
 
+            <div class="quiz-area hide">    
+
+                <h2 class="container-title" id="question">This is Where the Question will go </h2>
+
+                <div id="choices">
+                <button>Answer 1</button>
+                <button>Answer 2</button>
+                <button>Answer 3</button>
+                <button>Answer 4</button>
+                </div>
+            </div>
         </div>
 </div>
 <!--JavaScript - jQuery & my JS-->
