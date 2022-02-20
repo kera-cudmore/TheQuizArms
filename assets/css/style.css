@@ -6,22 +6,13 @@
     padding: 0;
     margin: 0;
 }
-/* Background image added to the body with a backup colour in case the image cannot load */
+/* Background image added to the body with a backup colour in case the image cannot load,
+   Font to be used throughout the pages body */
 body {
 background-image: url("../images/bar1.webp");
 background-color: #000;
 background-size: cover;
-}
-
-/* Flex container */
-.container {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 80vh;
-    justify-content: center;
-    align-content: center;
-
+font-family: 'Quicksand', sans-serif;
 }
 
 /* Page Title */
@@ -35,8 +26,25 @@ h1 {
     text-shadow: 10px 10px 10px #a50c3c;
 }
 
-/* Game area */
-#game-area {
+.hide {
+    display: none;
+}
+
+/* CONTAINERS */
+
+/* Flex container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-content: center;
+
+}
+
+/* Outer Container */
+#outer-container {
     background-color: #292929;
     opacity: 0.9;
     width: 60%;
@@ -45,12 +53,20 @@ h1 {
     color: #f5f5f5;
 }
 
-#question {
+.container-title {
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
     font-weight: 500;
     font-size: 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+}
+
+.difficulty-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.difficulty-btns > button {
+    width: 10rem;
 }
 
 #choices {
@@ -58,11 +74,12 @@ h1 {
     grid-gap: 1rem;
 }
 
+
+/* Button Styling */
 button {
-    font-family: 'Quicksand', sans-serif;
     font-size: 2rem;
     font-weight: 400;
-    padding: 0.75rem 0;
+    padding: 0.75rem;
     background-color: #000;
     border-radius: 1rem;
     color: #f5f5f5;
