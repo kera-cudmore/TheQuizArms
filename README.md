@@ -99,9 +99,10 @@ As the website is called The Quiz Arms, I wanted to use an image for the page ba
 
 Wireframes were created for mobile, tablet and desktop using balsamiq.
 
-![Home Page]()
-![Game Page]()
-![High Scores Page]()
+![Home Page](documentation/wireframes/homewireframe.webp)
+![Difficulty Page](documentation/wireframes/difficultywireframe.webp)
+![Game Page](documentation/wireframes/gamewireframe.webp)
+![High Scores Page](documentation/wireframes/highscorewireframe.webp)
 
 ### Features
 
