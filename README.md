@@ -4,7 +4,7 @@ Test your general knowledge and get pub quiz ready!
 
 Add site responsive screenshot here
 
-View the deployed site here: [The Quiz Arms]()
+View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/TheQuizArms?color=red&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/TheQuizArms?color=orange&style=for-the-badge)
@@ -76,6 +76,8 @@ Google Fonts was used to import the chosen fonts for use in the site.
 
 ### Imagery
 
+As the website is called The Quiz Arms, I wanted to use an image for the page background of a pub to give the user of the site the feeling that they are participating in a pub quiz.
+
 ### Wireframes
 
 Wireframes were created for mobile, tablet and desktop using balsamiq.
@@ -145,7 +147,7 @@ HTML, CSS, Javascript
 
 ### Deployment
 
-The site is deployed using GitHub Pages - [The Quiz Arms]().
+The site is deployed using GitHub Pages - [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/).
 
 To Deploy the site using GitHub Pages:
 
