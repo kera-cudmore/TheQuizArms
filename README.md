@@ -58,9 +58,18 @@ View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQ
 
 #### First Time Visitor Goals
 
+* I want to test my General Knowledge.
+
 #### Returning Visitor Goals
 
+* I want to test my General Knowledge.
+* I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site.
+
 #### Frequent Visitor Goals
+
+* I want to be able to test my General Knowledge.
+* I want to be able to adjust the difficulty level to keep improving my knowledge.
+* I want to be able to log my high scores.
 
 - - -
 
