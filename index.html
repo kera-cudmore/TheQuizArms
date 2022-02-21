@@ -27,20 +27,39 @@
     <!--Page Title-->
     <title>The Quiz Arms - Home Page</title>
 </head>
+
 <body>
     <h1>THE QUIZ ARMS</h1>
 
 <div class="container"> 
-        <div id="outer-container">
-
+        
+    <div id="outer-container">
         <h2 class="container-title">Welcome to The Quiz Arms!</h2>
-            <p>The Quiz Arms is your virtual local, a place where you can always join in with a quiz, wherever you are :)</p>
-            <button id="">How to play</button>
+         <p>The Quiz Arms is your virtual local, a place where you can always join in with a quiz, wherever you are :)</p>
+            
+            <div class="welcome-btns">
+            <button id="open-modal">How to play</button>
             <button href="game.html">Play</button>
             <button href="highscores.html">High Scores</button>
+            </div>
 
         </div>
 </div>
+
+<div id="modal-container">
+    <div id="modal-content">
+        <h2>How To Play</h2>
+        <ul>
+            <li>Press Play</li>
+            <li>Choose the level of difficulty you would like to play</li>
+            <li>Answer the questions by clicking on the answer you think is correct</li>
+            <li>Record your high score, and play again - can you beat your score?</li>
+        </ul>
+        <button id="close-modal">Close</button>
+    </div>
+</div>
+
+
 <!--JavaScript - jQuery & my JS-->
 <script src="assets/js/javascript.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
