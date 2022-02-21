@@ -71,7 +71,7 @@ p {
 
 
 
-.welcome-btns, difficulty-btns {
+.welcome-btns, .difficulty-btns, .highscore-btns {
     display: flex;
     justify-content: space-around;
 }
