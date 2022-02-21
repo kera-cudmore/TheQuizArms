@@ -5,7 +5,9 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
 /* Background image added to the body with a backup colour in case the image cannot load,
    Font to be used throughout the pages body */
 body {
@@ -15,6 +17,12 @@ background-size: cover;
 font-family: 'Quicksand', sans-serif;
 }
 
+/* Hides from display */
+.hide {
+    display: none;
+}
+
+/* HEADINGS & TEXT */
 /* Page Title */
 h1 {
     font-family: 'Almendra', serif;
@@ -26,12 +34,20 @@ h1 {
     text-shadow: 10px 10px 10px #a50c3c;
 }
 
-.hide {
-    display: none;
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 3rem;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 3rem;
 }
 
 /* CONTAINERS */
-
 /* Flex container */
 .container {
     display: flex;
@@ -53,14 +69,9 @@ h1 {
     color: #f5f5f5;
 }
 
-.container-title {
-    text-align: center;
-    font-weight: 500;
-    font-size: 3rem;
-    padding-bottom: 3rem;
-}
 
-.difficulty-btns {
+
+.welcome-btns, difficulty-btns {
     display: flex;
     justify-content: space-around;
 }
@@ -83,4 +94,48 @@ button {
     background-color: #000;
     border-radius: 1rem;
     color: #f5f5f5;
+}
+
+/* MODAL - created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
+/* Making the modal container show on the whole screen, centering the contents */
+#modal-container {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #292929;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Changed the modal opacity to be visable */
+#modal-container.show {
+opacity: 1;
+pointer-events: auto;
+}
+
+/* Adding a border with rounded corners and padding around the modal content */
+#modal-content {
+    border: #a50c3c 5px solid;
+    border-radius: 1rem;
+    padding: 4rem;
+    color: #f5f5f5;
+}
+
+/* Adding some padding in between list items, centering text, removing bullet point & adjusting font size */
+li {
+    padding: 1rem;
+    text-align: center;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+/* adding margin to top of close modal button */
+#close-modal {
+    margin-top: 3rem;
 }
