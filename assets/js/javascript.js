@@ -13,3 +13,12 @@ openModal.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
     modalContainer.classList.remove("show");
 });
+
+
+// PLAY BUTTON
+
+const play = document.getElementById("play");
+
+play.onclick = function() {
+    location.href = "game.html";
+};
