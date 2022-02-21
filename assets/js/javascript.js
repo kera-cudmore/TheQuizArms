@@ -22,3 +22,12 @@ const play = document.getElementById("play");
 play.onclick = function() {
     location.href = "game.html";
 };
+
+
+// HIGH SCORES BUTTON
+
+const highScores = document.getElementById("highScores");
+
+highScores.onclick = function() {
+    location.href = "highscores.html";
+};
