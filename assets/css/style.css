@@ -164,7 +164,7 @@ button {
 }
 }
 /* Tablets */
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width : 1023px) and (min-width: 768px) {
 
 h1 {
     font-size: 6rem;
