@@ -97,7 +97,15 @@ button:hover {
     background-color: #f5f5f5;
     color: #000;
     font-weight: 700;
-    border: #000 5px solid;
+    border: #000 3px solid;
+}
+
+/* Button active */
+button:active {
+    background-color: #f5f5f5;
+    color: #000;
+    font-weight: 700;
+    border: #000 3px solid;
 }
 
 /* MODAL - created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
