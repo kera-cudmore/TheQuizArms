@@ -154,8 +154,6 @@ HTML, CSS, Javascript
 
 * [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
 
-* [Tiny PNG](https://tinypng.com/) To compress images.
-
 * [Birme](https://www.birme.net/) To resize images and convert to webp format.
 
 * [Favicon.io](https://favicon.io/) To create favicon.
