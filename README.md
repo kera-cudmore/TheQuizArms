@@ -113,11 +113,15 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 
 ### Features
 
-The website is comprised of …
+The website is comprised of a home page, a games page, a high scores page and a 404 error page.
 
-* All Pages on the website have:
+All Pages on the website have:
 
-* Future Implementations.
+* A favicon in the browser tab. ![favicon](documentation/favicon-image.webp)
+
+Future Implementations.
+
+* In future implementations I would like to give the user of the site more choice as to how many questions are in their quiz.
 
 ### Accessibility
 
