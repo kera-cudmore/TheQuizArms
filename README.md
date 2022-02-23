@@ -68,6 +68,8 @@ During lockdowns pub quizzes remained popular - they just changed format to beco
 #### First Time Visitor Goals
 
 * I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere.
+* I want the site to be responsive to my device.
+* I want the site to be easy to navigate.
 
 #### Returning Visitor Goals
 
