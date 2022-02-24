@@ -177,6 +177,8 @@ HTML, CSS, Javascript
 
 * [Open Trivia DataBase](https://opentdb.com/) - API used for the trivia questions.
 
+* [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa) - a google chrome extension to enable you to view JSON as raw data or parsed.
+
 - - -
 
 ## Deployment & Local Development
