@@ -79,7 +79,7 @@ p {
     grid-gap: 1rem;
 }
 
-/* buttons */
+/* a buttons */
 a.btn {
     font-size: 2rem;
     font-weight: 500;
@@ -194,6 +194,11 @@ button {
     margin: 0.75rem;
 }
 
+a.btn, a.btn:hover {
+    font-size: 1.125rem;
+    margin: 0.75rem;
+}
+
 #modal-content {
     padding: 2rem;
 }
@@ -219,6 +224,11 @@ p {
 }
 
 button {
+    font-size: 1.25rem;
+    margin: 0.75rem;
+}
+
+a.btn, a.btn:hover {
     font-size: 1.25rem;
     margin: 0.75rem;
 }
