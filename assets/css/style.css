@@ -23,7 +23,7 @@ font-family: 'Quicksand', sans-serif;
 
 /* HEADINGS & TEXT */
 /* Page Title */
-h1 {
+ h1 {
     font-family: 'Almendra', serif;
     font-size: 8rem;
     font-weight: 700;
@@ -31,6 +31,7 @@ h1 {
     color: #f5f5f5;
     text-align: center;
     text-shadow: 10px 10px 10px #a50c3c;
+    
 }
 
 h2 {
@@ -74,13 +75,8 @@ p {
     justify-content: space-around;
 }
 
-#choices {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-/* a buttons */
-a.btn {
+/* Button styling */
+p.btn, a.btn {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
@@ -93,7 +89,7 @@ a.btn {
     box-shadow: -2px -2px 5px #f5f5f5 inset;
 }
 
-a.btn:hover {
+p.btn:hover, a.btn:hover {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
