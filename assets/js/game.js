@@ -20,15 +20,22 @@ function hideDifficulty() {
 
 
 // START GAME FUNCTION
-function startGame() {
-    fetch(easyQuiz)
-    .then(response => response.json())
-    .then(data => console.log(data));  
+async function startGame() {
+const response = await fetch(easyQuiz);
+const data = await response.json();
+return data;
 };
+
+startGame().then((data) => {
+    console.log(data);
+    const results = data.results[0];
+    document.getElementById("question").innerHTML = results.question;
+
+});
 
 
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
 // change this to the class of button difficulty so that it performs for all of the difficulty buttons
-easy.addEventListener("click", hideDifficulty)
+easy.addEventListener("click", hideDifficulty);
 easy.addEventListener("click", startGame);
