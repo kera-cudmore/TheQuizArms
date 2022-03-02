@@ -33,9 +33,6 @@ function arrayShuffle(array) {
 for (let i = array.length -1; i > 0; i--) {
     let s = Math.floor(Math.random() * (i + 1));
 [array[i], array[s]] = [array[s], array[i]];
-console.log(i);
-console.log(s);
-console.log(array);
 }
 };
 
@@ -52,9 +49,16 @@ startGame().then((data) => {
     const answers = [...results.incorrect_answers, results.correct_answer];
     console.log(answers);
 
-
-    
+    // answers array shuffled
     arrayShuffle(answers);
+    console.log(answers);
+
+        document.getElementById("answer1").innerHTML = `${answers[0]}`;
+        document.getElementById("answer2").innerHTML = `${answers[1]}`;
+        document.getElementById("answer3").innerHTML = `${answers[2]}`;
+        document.getElementById("answer4").innerHTML = `${answers[3]}`;
+
+
 });
 
 
