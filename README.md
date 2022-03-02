@@ -2,6 +2,12 @@
 
 Test your general knowledge and get pub quiz ready!
 
+Pub Quizzes are played all around the world, but they are especially popular in the UK. It is estimated that over half the pubs in the UK host a regular quiz night, thats roughly 23,600 pubs!
+
+[YouGov](https://yougov.co.uk/topics/lifestyle/explore/activity/Pub_quizzes) show that 98% of people surveyed have heard of a pub quiz, and are rated as the 19th most popular social activity.
+
+During lockdowns pub quizzes remained popular - they just changed format to become virtual. This gave me the idea of creating a quiz site that would feel like a pub quiz, where users could play on their own to improve their general knowledge anywhere and at any time.
+
 Add site responsive screenshot here
 
 View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
@@ -15,7 +21,6 @@ View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQ
 ## CONTENTS
 
 * [User Experience (UX)](#User-Experience-(UX))
-  * [Initial Idea](#Initial-Idea)
   * [User Stories](#User-Stories)
 
 * [Design](#Design)
@@ -54,14 +59,6 @@ View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQ
 - - -
 
 ## User Experience (UX)
-
-### Initial Idea
-
-Pub Quizzes are played all around the world, but they are especially popular in the UK. It is estimated that over half the pubs in the UK host a regular quiz night, thats roughly 23,600 pubs!
-
-[YouGov](https://yougov.co.uk/topics/lifestyle/explore/activity/Pub_quizzes) show that 98% of people surveyed have heard of a pub quiz, and are rated as the 19th most popular social activity.
-
-During lockdowns pub quizzes remained popular - they just changed format to become virtual. This gave me the idea of creating a quiz site that would feel like a pub quiz, where users could play on their own to improve their general knowledge anywhere and at any time.
 
 ### User Stories
 
