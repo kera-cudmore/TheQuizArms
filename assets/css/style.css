@@ -49,6 +49,9 @@ p {
     padding-bottom: 3rem;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* CONTAINERS */
 /* Flex container*/
@@ -80,11 +83,10 @@ p {
 
 
 /* Button styling */
-p.btn, a.btn {
+a.btn {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    text-decoration: none;
     padding: 0.75rem;
     background-color: #000;
     border-radius: 1rem;
@@ -93,11 +95,10 @@ p.btn, a.btn {
     box-shadow: -2px -2px 5px #f5f5f5 inset;
 }
 
-p.btn:hover, a.btn:hover {
+a.btn:hover {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
-    text-decoration: none;
     padding: 0.75rem;
     background-color: #f5f5f5;
     border-radius: 1rem;
@@ -107,28 +108,6 @@ p.btn:hover, a.btn:hover {
     cursor: grab
 }
 
-/*
-button {
-    font-size: 2rem;
-    font-weight: 400;
-    text-align: center;
-    padding: 0.75rem;
-    background-color: #000;
-    border-radius: 1rem;
-    color: #f5f5f5;
-    margin: 0.75rem;
-
-}
-
-/* Button on hover 
-button:hover {
-    background-color: #f5f5f5;
-    color: #000;
-    font-weight: 700;
-    border: #000 3px solid;
-}
-
-*/
 
 /* MODAL - created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
 /* Making the modal container show on the whole screen, centering the contents */
@@ -192,11 +171,6 @@ p {
     padding-bottom: 1.5rem;
 }
 
-/*button {
-    font-size: 1.125rem;
-    margin: 0.75rem;
-}*/
-
 a.btn, a.btn:hover {
     font-size: 1.125rem;
     margin: 0.75rem;
@@ -225,11 +199,6 @@ p {
     font-size: 1.25rem;
     padding-bottom: 1.5rem;
 }
-
-/*button {
-    font-size: 1.25rem;
-    margin: 0.75rem;
-}*/
 
 a.btn, a.btn:hover {
     font-size: 1.25rem;
