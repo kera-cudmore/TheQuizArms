@@ -11,51 +11,24 @@ const question = document.getElementById("question");
 const next = document.getElementById("next");
  
 
+// HIDE DIFFICULTY SECTION
+function hideDifficulty() {
+    document.getElementById("difficulty").classList.add("hide");
+    document.getElementById("quiz-area").classList.remove("hide");
 
-// CHOOSE DIFFICULTY - EVENT LISTENERS
-easy.addEventListener("click", alert("hello"));
-
-
-
-
-
-
-
-
-/*
-
-// START GAME FUNCTION
-startGame = () => {
-
-};
-
-
-
-
-
-function useApiData(data) {
-    document.getElementById("question").innerHTML = `${data.results[0].question}`
 }
 
 
-// START GAME
-//defines the start game function
-startGame = () => {
-    console.log("hello");
-
-async function easyApiRequest() {
-    let response = await fetch (easyQuiz);
-    console.log(response)
-    let data = await response.json()
-    console.log(data)
+// START GAME FUNCTION
+function startGame() {
+    fetch(easyQuiz)
+    .then(response => response.json())
+    .then(data => console.log(data));  
 };
 
-    document.getElementsByClassName("difficulty").classList.add("hide");
-    document.getElementByClass("quiz-area").classList.remove("hide");
 
 
-
-    useApiData(data)
-};
-
-*/
+// CHOOSE DIFFICULTY - EVENT LISTENERS
+// change this to the class of button difficulty so that it performs for all of the difficulty buttons
+easy.addEventListener("click", hideDifficulty)
+easy.addEventListener("click", startGame);
