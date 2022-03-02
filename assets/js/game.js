@@ -4,8 +4,8 @@ const mediumQuiz = "https://opentdb.com/api.php?amount=15&difficulty=medium&type
 const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 
 const easy = document.getElementById("easy");
-const medium = document.getElementById("medium")
-const hard = document.getElementById("hard")
+const medium = document.getElementById("medium");
+const hard = document.getElementById("hard");
 
 const question = document.getElementById("question");
 const next = document.getElementById("next");
@@ -24,7 +24,7 @@ async function startGame() {
 const response = await fetch(easyQuiz);
 const data = await response.json();
 return data;
-};
+}
 
 
 // SHUFFLE THE ANSWERS ARRAY - Fisher Yates Shuffle
@@ -34,7 +34,7 @@ for (let i = array.length -1; i > 0; i--) {
     let s = Math.floor(Math.random() * (i + 1));
 [array[i], array[s]] = [array[s], array[i]];
 }
-};
+}
 
 
 // Start Game Function - adding questions & answers
