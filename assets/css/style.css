@@ -1,5 +1,7 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,700&family=Quicksand:wght@400;500;700&display=swap');
+
+
 /* Removes all margins & Padding on everything so they can be fully customised */
 * {
     padding: 0;
@@ -21,6 +23,7 @@ font-family: 'Quicksand', sans-serif;
     display: none;
 }
 
+
 /* HEADINGS & TEXT */
 /* Page Title */
  h1 {
@@ -30,8 +33,7 @@ font-family: 'Quicksand', sans-serif;
     font-style: italic;
     color: #f5f5f5;
     text-align: center;
-    text-shadow: 10px 10px 10px #a50c3c;
-    
+    text-shadow: 10px 10px 10px #a50c3c; 
 }
 
 h2 {
@@ -46,6 +48,7 @@ p {
     font-size: 2rem;
     padding-bottom: 3rem;
 }
+
 
 /* CONTAINERS */
 /* Flex container*/
@@ -75,6 +78,7 @@ p {
     justify-content: space-around;
 }
 
+
 /* Button styling */
 p.btn, a.btn {
     font-size: 2rem;
@@ -100,9 +104,10 @@ p.btn:hover, a.btn:hover {
     color: #000;
     margin: 0.75rem;
     box-shadow: -2px -2px 5px #000 inset;
+    cursor: grab
 }
 
-/* Button Styling */
+/*
 button {
     font-size: 2rem;
     font-weight: 400;
@@ -115,7 +120,7 @@ button {
 
 }
 
-/* Button on hover */
+/* Button on hover 
 button:hover {
     background-color: #f5f5f5;
     color: #000;
@@ -123,6 +128,7 @@ button:hover {
     border: #000 3px solid;
 }
 
+*/
 
 /* MODAL - created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I */
 /* Making the modal container show on the whole screen, centering the contents */
@@ -186,10 +192,10 @@ p {
     padding-bottom: 1.5rem;
 }
 
-button {
+/*button {
     font-size: 1.125rem;
     margin: 0.75rem;
-}
+}*/
 
 a.btn, a.btn:hover {
     font-size: 1.125rem;
@@ -220,10 +226,10 @@ p {
     padding-bottom: 1.5rem;
 }
 
-button {
+/*button {
     font-size: 1.25rem;
     margin: 0.75rem;
-}
+}*/
 
 a.btn, a.btn:hover {
     font-size: 1.25rem;
