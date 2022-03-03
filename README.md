@@ -1,6 +1,6 @@
 # The Quiz Arms
-![The Quiz Arms Banner](documentation/the-quiz-arms-banner.png)
 
+![The Quiz Arms Banner](documentation/the-quiz-arms-banner.png)
 
 Test your general knowledge and get pub quiz ready!
 
@@ -31,6 +31,11 @@ View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQ
   * [Imagery](#Imagery)
   * [Wireframes](#Wireframes)
   * [Features](#Features)
+    * [The Home Page](#The-Home-Page)
+    * [The Game Page](#The-Game-Page)
+    * [The High Scores Page](#The-High-Scores-Page)
+    * [The 404 Error Page](#The-404-Error-Page)
+    * [Fututre Implementations](#Future-Implementations)
   * [Accessibility](#Accessibility)
 
 * [Technologies Used](#Technologies-Used)
@@ -92,7 +97,7 @@ As the pages of the site have a background image, I wanted to keep the colour sc
 * I have used # a50c3c for the border of the modal and to display the wrong answers.
 * I have used #047638 to display the correct answer.
 
-![The Quiz Arms Color Scheme](documentation/color-scheme.webp)
+  ![The Quiz Arms Color Scheme](documentation/color-scheme.webp)
 
 ### Typography
 
@@ -123,13 +128,49 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 
 The website is comprised of a home page, a games page, a high scores page and a 404 error page.
 
-All Pages on the website have:
+All Pages on the website are responsive and have:
 
-* A favicon in the browser tab. ![favicon](documentation/favicon-image.webp)
+* A favicon in the browser tab.
+  
+  ![favicon](documentation/favicon-image.webp)
 
-Future Implementations.
+* The title of the site at the top of every page. This title also acts as a link back to the home page.
+  ![The Quiz Arms Title](documentation/the-quiz-arms-banner.png)
 
-* In future implementations I would like to give the user of the site more choice as to how many questions are in their quiz.
+#### The Home Page
+
+The home page of The Quiz Arms displays the sites name as a title and then a container which holds some welcome text. Below this are three buttons, how to play, play and high scores.
+
+![Home page image](LINK TO GO HERE)
+
+1. How to play - This button opens a modal showing the user how to play the game. The modal contains a close button which will close the modal, and show the home page again.
+  ![Modal open image](LINK TO GO HERE)
+2. Play - This button will redirect the user to the game page to select the difficulty of their quiz.
+3. High Scores - This button redirects the user to the high scores page.
+
+#### The Game Page
+
+The game page displays the sites name as a title. This also acts as a link back to the home page. Initially on the game page you will be shown a container with three buttons to select the difficulty of the quiz the user can choose from.
+
+![Image of the game page difficulty selection buttons](LINK TO GO HERE)
+
+Once the user has selected their difficulty they will then be shown the quiz area. The quiz area contains the question and the 4  answer choices.
+
+![Image of quiz area](LINK TO GO HERE)
+
+#### The High Scores Page
+
+The high scores page displays the sites name as a title. This also acts as a link back to the home page.
+
+#### The 404 Error Page
+
+The 404 error page displays the sites name as a title. This also acts as a link back to the home page. Within the page container there is a sorry message explaining to the user that there has been an error directing them to the page they were looking for. The user is then given a choice of three buttons to redirect them to other pages on the site, the home page, the games page and the high scores page.
+
+1[Error page image](LINK GOES HERE)
+
+#### Future Implementations
+
+In future implementations I would like to give users the option to select the amount of questions in their quiz. I would also like to look into making the quiz a multiplayer game, so that it could be played by teams, which would make the quiz even more like a pub quiz.
 
 ### Accessibility
 
