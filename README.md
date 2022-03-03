@@ -1,4 +1,6 @@
 # The Quiz Arms
+![The Quiz Arms Banner](documentation/the-quiz-arms-banner.png)
+
 
 Test your general knowledge and get pub quiz ready!
 
