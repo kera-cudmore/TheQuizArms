@@ -41,37 +41,68 @@ async function callApi() {
     const response = await fetch(easyQuiz);
     const data = await response.json(); 
     console.log(data);
-
-
     hideDifficulty();
     startGame(data);
 }
 
-// START GAME FUNCTION - calling api
-function startGame(data) {
-    
-    const results = data.results[0];
 
+// CHECK ANSWER FUNCTION
+function checkAnswer() {
+if (    // check if item clicked correctAnswer === true - 
+    ) {
+    //add class correct (class to be made)
+} else {
+    //add class incorrect (class to be made)
+}
+
+    // display next button
+   // next.classList.remove("hide");
+}
+
+
+// NEXT QUESTION FUNCTION - run when next button pressed
+function nextQuestion() {
+    for (let questionsCompleted = 1; questionsCompleted < 15; questionsCompleted ++) {
+    // run start game again?
+        //startGame - add 1 to results 
+    } else {
+    //else results.length reached show score page - To be added
+    }
+};
+
+
+// START GAME FUNCTION
+function startGame(data) {
+    //hides the next button
+    const results = data.results[0];
         // adds the question to the site
         document.getElementById("question").innerHTML = results.question;
     
+        const correctAnswer = results.correct_answer;
+
         // Create an array that holds all the answer choices for the question
-        const answers = [...results.incorrect_answers, results.correct_answer];
+        const answers = [...results.incorrect_answers, correctAnswer];
         console.log(answers);
     
-        // answers array shuffled & added to answer buttons
+        // answers array shuffled & added to answer buttons (can this be condensed?)
         arrayShuffle(answers);
         console.log(answers);
             answer1.innerHTML = `${answers[0]}`;
             answer2.innerHTML = `${answers[1]}`;
             answer3.innerHTML = `${answers[2]}`;
             answer4.innerHTML = `${answers[3]}`;   
+
+        checkAnswer();
         };
 
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
-// change this to the class of button difficulty so that it performs for all of the difficulty buttons
+// change so the button selected calls the api and adds the correct url into fetch
 easy.addEventListener("click", callApi);
+/*
+medium.addEventListener("click", callApi);
+hard.addEventListener("click", callApi);
+*/
 
 /*
 const difficultyButtons = document.querySelectorAll(".difficulty")
