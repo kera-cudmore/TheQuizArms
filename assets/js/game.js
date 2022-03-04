@@ -41,6 +41,8 @@ async function callApi() {
     const response = await fetch(easyQuiz);
     const data = await response.json(); 
     console.log(data);
+    
+    // hides the difficulty box and runs start game function with data called
     hideDifficulty();
     startGame(data);
 }
