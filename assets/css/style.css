@@ -108,13 +108,13 @@ a.btn:hover {
     cursor: grab
 }
 
-/* Check Answer & Next Button - Styled so they can be differentiated from the answer buttons */
-#check, #next {
+/* Next Button - Styled so it can be differentiated from the answer buttons */
+#next {
     background-color: #f5f5f5;
     color: #000;
 }
 
-#check:hover, #next:hover {
+#next:hover {
     background-color: #000;
     color: #f5f5f5;
 }
