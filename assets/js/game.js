@@ -4,6 +4,7 @@ const easyQuiz = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=mul
 const mediumQuiz = "https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple";
 const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 
+
 // difficulty buttons
 const easy = document.getElementById("easy");
 const medium = document.getElementById("medium");
@@ -35,15 +36,22 @@ for (let i = array.length -1; i > 0; i--) {
 }
 
 
-// START GAME FUNCTION - calling api
-async function startGame() {
-    
+//CALL API FUNCTION
+async function callApi() {
     const response = await fetch(easyQuiz);
-    const data = await response.json();
+    const data = await response.json(); 
+    console.log(data);
 
-        console.log(data);
-        const results = data.results[0];
+
+    hideDifficulty();
+    startGame(data);
+}
+
+// START GAME FUNCTION - calling api
+function startGame(data) {
     
+    const results = data.results[0];
+
         // adds the question to the site
         document.getElementById("question").innerHTML = results.question;
     
@@ -63,13 +71,10 @@ async function startGame() {
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
 // change this to the class of button difficulty so that it performs for all of the difficulty buttons
-easy.addEventListener("click", hideDifficulty);
-easy.addEventListener("click", startGame);
+easy.addEventListener("click", callApi);
 
-
+/*
 const difficultyButtons = document.querySelectorAll(".difficulty")
-difficultyButtons.forEach(x => x.setAttribute("onclick", "alertFunction(this.id)"))
+difficultyButtons.forEach(x => x.setAttribute("onclick", "callApi(this.id)"))
+*/
 
-function alertFunction(theId){
-alert(theId)
-}
