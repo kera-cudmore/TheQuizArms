@@ -17,7 +17,7 @@ const answer2 =document.getElementById("answer2")
 const answer3 =document.getElementById("answer3")
 const answer4 =document.getElementById("answer4")
 const next = document.getElementById("next");
- 
+const answerButtons = document.getElementsByClassName("answer-text");
 
 // HIDE DIFFICULTY SECTION FUNCTION
 function hideDifficulty() {
@@ -47,31 +47,33 @@ async function callApi() {
     startGame(data);
 }
 
-/*
-// CHECK ANSWER FUNCTION
-function checkAnswer() {
-    
-if (    // check if item clicked correctAnswer === true - 
-    ) {
-    //add class correct (class to be made)
-} else {
-    //add class incorrect (class to be made)
-}
 
-    // display next button
-   // next.classList.remove("hide");
+// CHECK ANSWER FUNCTION
+function checkAnswer(e) {
+  console.log(e);
+    // check if item clicked has the dataset of correct
+    if (e.target.dataset.correct) {
+        console.log("Right answer");
+    // add the correct answer css
+
+    } else {
+        console.log("wrong answer");
+        //add class incorrect (class to be made)
+
+    }
+
+// if questions less than 15 display next button
+next.classList.remove("hide");
+// if answers =15 show end game page
+
+// remove data-correct from button
 }
-*/
 
 /*
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion() {
-    for (let questionsCompleted = 1; questionsCompleted < 15; questionsCompleted ++) {
+    
     // run start game again?
-        //startGame - add 1 to results 
-    } else {
-    //else results.length reached show score page - To be added
-    }
 };
 */
 
@@ -79,26 +81,32 @@ function nextQuestion() {
 function startGame(data) {
     //hides the next button
     const results = data.results[0];
-        // adds the question to the site
-        document.getElementById("question").innerHTML = results.question;
-    
-        const correctAnswer = results.correct_answer;
+    // adds the question to the site
+    document.getElementById("question").innerHTML = results.question;
 
-        // Create an array that holds all the answer choices for the question
-        const answers = [...results.incorrect_answers, correctAnswer];
-        console.log(answers);
-    
-        // answers array shuffled & added to answer buttons (can this be condensed?)
-        arrayShuffle(answers);
-        console.log(answers);
-            answer1.innerHTML = `${answers[0]}`;
-            answer2.innerHTML = `${answers[1]}`;
-            answer3.innerHTML = `${answers[2]}`;
-            answer4.innerHTML = `${answers[3]}`;   
+    const correctAnswer = results.correct_answer;
 
-        
-        
-        };
+    // Create an array that holds all the answer choices for the question
+    const answers = [...results.incorrect_answers, correctAnswer];
+
+    // answers array shuffled & added to answer buttons (can this be condensed?)
+    arrayShuffle(answers);
+    //console.log(answers);
+        answer1.innerText = `${answers[0]}`;
+        answer2.innerText = `${answers[1]}`;
+        answer3.innerText = `${answers[2]}`;
+        answer4.innerText = `${answers[3]}`;   
+    console.log(correctAnswer);
+
+    for (let button of answerButtons) {
+
+        if (button.innerText === correctAnswer) {
+            button.setAttribute("data-correct", "true")
+            console.log(button);
+        }
+        button.addEventListener("click", checkAnswer);
+    }
+}
 
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
