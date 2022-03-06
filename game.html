@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <meta name="Description" content="Enter your description here"/>
-    <meta name="keywords" content="your, tags"/>
+
+    <meta name="Description" content="The Quiz Arms is a pub quiz you can take part in any time, anywhere and test your general knowledge!" />
+    <meta name="keywords" content="The Quiz Arms, pub quiz game, pub quiz, pub quiz online, online quiz game, general knowledge pub quiz, online pub quiz" />
 
     <!-- Facebook, LinkedIn, Google Social Sharing Meta Tags -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content="The Quiz Arms" />
-    <meta property="og:description" content="DESCRIPTION OF PAGE CONTENT" /> <!-- Same as what's inside description meta tag -->
-    <!-- The description you want displayed when your page is linked to (maximum 300 characters) -->
+    <meta property="og:description" content="The Quiz Arms is a pub quiz you can take part in any time, anywhere and test your general knowledge!" />
     <meta name="image" property="og:image" content="URL TO IMAGE" />
     <!-- URL of image to be displayed when your site is linked to -->
-    <meta property="og:image:alt" content="ALT TEXT FOR IMAGE" /> <!-- Alt text for above image - an accessibility win -->
-    <meta property="og:url" content="#" /> <!-- Your page's URL -->
+    <meta property="og:image:alt" content="The Quiz Arms site shown on a variety of devices" />
+    <meta property="og:url" content="https://kera-cudmore.github.io/TheQuizArms/game.html" />
     <meta property="og:site_name" content="The Quiz Arms" />
     <meta name="author" content="Kera Cudmore">
 
@@ -28,44 +28,48 @@
     <!-- Stylesheets - Font Awesome & style.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-  
-    <!--Page Title-->
-    <title>The Quiz Arms</title>
-</head>
-<body class="flex-container">
-    <a href="index.html"><h1>THE QUIZ ARMS</h1></a>
 
-        <!-- Grey Outer Container that holds the Content-->
-        <div class="outer" id="outer-container">
-           
-            <!--Difficulty Buttons Container-->
-            <div id="difficulty">
-                <h2>Select your difficulty</h2>
-                <div class=" btn-group">
+    <!--Page Title-->
+    <title>The Quiz Arms - Play</title>
+</head>
+
+<body class="flex-container">
+    <a href="index.html">
+        <h1>THE QUIZ ARMS</h1>
+    </a>
+
+    <!-- Grey Outer Container that holds the Content-->
+    <div class="outer" id="outer-container">
+
+        <!--Difficulty Buttons Container-->
+        <div id="difficulty">
+            <h2>Select your difficulty</h2>
+            <div class=" btn-group">
                 <button class="btn difficulty" id="easy">Easy</button>
                 <button class="btn difficulty" id="medium">Medium</button>
                 <button class="btn difficulty" id="hard">Hard</button>
-                </div>
-            </div>
-
-            <!--Quiz Question & Buttons Container-->
-            <div id="quiz-area" class="hide">    
-
-                <h2><span id="question"></span></h2>
-
-                <div class="answer-btns btn-group">
-                    <button class="btn answer-text" id="answer1"></button>
-                    <button class="btn answer-text" id="answer2"></button>
-                    <button class="btn answer-text" id="answer3"></button>
-                    <button class="btn answer-text" id="answer4"></button>
- 
-                    <button id="next" class=" btn next-btn hide">NEXT</button>
-                </div>
             </div>
         </div>
-<!--JavaScript - jQuery & my JS-->
-<script src="assets/js/game.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+
+        <!--Quiz Question & Buttons Container-->
+        <div id="quiz-area" class="hide">
+
+            <h2><span id="question"></span></h2>
+
+            <div class="answer-btns btn-group">
+                <button class="btn answer-text" id="answer1"></button>
+                <button class="btn answer-text" id="answer2"></button>
+                <button class="btn answer-text" id="answer3"></button>
+                <button class="btn answer-text" id="answer4"></button>
+
+                <button id="next" class="btn next-btn hide">NEXT</button>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript - jQuery & my JS-->
+    <script src="assets/js/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
 
 </body>
+
 </html>
