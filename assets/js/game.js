@@ -47,9 +47,10 @@ async function callApi() {
     startGame(data);
 }
 
-
+/*
 // CHECK ANSWER FUNCTION
 function checkAnswer() {
+    
 if (    // check if item clicked correctAnswer === true - 
     ) {
     //add class correct (class to be made)
@@ -60,8 +61,9 @@ if (    // check if item clicked correctAnswer === true -
     // display next button
    // next.classList.remove("hide");
 }
+*/
 
-
+/*
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion() {
     for (let questionsCompleted = 1; questionsCompleted < 15; questionsCompleted ++) {
@@ -71,7 +73,7 @@ function nextQuestion() {
     //else results.length reached show score page - To be added
     }
 };
-
+*/
 
 // START GAME FUNCTION
 function startGame(data) {
@@ -94,7 +96,8 @@ function startGame(data) {
             answer3.innerHTML = `${answers[2]}`;
             answer4.innerHTML = `${answers[3]}`;   
 
-        checkAnswer();
+        
+        
         };
 
 
