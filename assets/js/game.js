@@ -48,13 +48,12 @@ async function callApi() {
 }
 
 
-// CHECK ANSWER FUNCTION
+// CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
     console.log(e);
     // check if item clicked has the dataset of correct
     if (e.target.dataset.correct) {
         console.log("Right answer");
-
         // add the correct answer css
         document.getElementById("outer-container").classList.add("correct");
     } else {
@@ -63,64 +62,65 @@ function checkAnswer(e) {
         document.getElementById("outer-container").classList.add("incorrect");
     }
 }
-    /*
+/*
 
-    // if questions less than 15 display next button
-    next.classList.remove("hide");
-    // if answers =15 show end game page
+// if questions less than 15 display next button
+next.classList.remove("hide");
+// if answers =15 show end game page
 
-    // remove data-correct from button
-    }
+// remove data-correct from button
+}
 
-    /*
-    // NEXT QUESTION FUNCTION - run when next button pressed
-    function nextQuestion() {
-        
-        // run start game again?
-    };
-    */
+/*
+// NEXT QUESTION FUNCTION - run when next button pressed
+function nextQuestion() {
+    
+    // run start game again?
+};
+*/
 
-    // START GAME FUNCTION
-    function startGame(data) {
-        //hides the next button
-        const results = data.results[0];
-        // adds the question to the site
-        document.getElementById("question").innerHTML = results.question;
+// START GAME FUNCTION
+function startGame(data) {
+    //hides the next button
+    const results = data.results[0];
+    // adds the question to the site
+    document.getElementById("question").innerHTML = results.question;
 
-        const correctAnswer = results.correct_answer;
+    const correctAnswer = results.correct_answer;
 
-        // Create an array that holds all the answer choices for the question
-        const answers = [...results.incorrect_answers, correctAnswer];
+    // Create an array that holds all the answer choices for the question
+    const answers = [...results.incorrect_answers, correctAnswer];
 
-        // answers array shuffled & added to answer buttons (can this be condensed?)
-        arrayShuffle(answers);
-        //console.log(answers);
-        answer1.innerText = `${answers[0]}`;
-        answer2.innerText = `${answers[1]}`;
-        answer3.innerText = `${answers[2]}`;
-        answer4.innerText = `${answers[3]}`;
-        console.log(correctAnswer);
+    // answers array shuffled & added to answer buttons (can this be condensed?)
+    arrayShuffle(answers);
 
-        for (let button of answerButtons) {
+    answer1.innerText = `${answers[0]}`;
+    answer2.innerText = `${answers[1]}`;
+    answer3.innerText = `${answers[2]}`;
+    answer4.innerText = `${answers[3]}`;
+    console.log(correctAnswer);
 
-            if (button.innerText === correctAnswer) {
-                button.setAttribute("data-correct", "true")
-                console.log(button);
-            }
-            button.addEventListener("click", checkAnswer);
+    // loops through to check for correct answer & adds data attribute to the correct answer 
+    for (let button of answerButtons) {
+        if (button.innerText === correctAnswer) {
+            button.setAttribute("data-correct", "true")
+            console.log(button);
         }
+        // adds event listener to each button & on click runs check answer function
+        button.addEventListener("click", checkAnswer);
     }
+}
 
 
-    // CHOOSE DIFFICULTY - EVENT LISTENERS
-    // change so the button selected calls the api and adds the correct url into fetch
-    easy.addEventListener("click", callApi);
-    /*
-    medium.addEventListener("click", callApi);
-    hard.addEventListener("click", callApi);
-    */
+// CHOOSE DIFFICULTY - EVENT LISTENERS
+// change so the button selected calls the api and adds the correct url into fetch
+easy.addEventListener("click", callApi);
+/*
+medium.addEventListener("click", callApi);
+hard.addEventListener("click", callApi);
+*/
 
-    /*
-    const difficultyButtons = document.querySelectorAll(".difficulty")
-    difficultyButtons.forEach(x => x.setAttribute("onclick", "callApi(this.id)"))
-    */
+/*
+const difficultyButtons = document.querySelectorAll(".difficulty")
+difficultyButtons.forEach(x => x.setAttribute("onclick", "callApi(this.id)"))
+*/
