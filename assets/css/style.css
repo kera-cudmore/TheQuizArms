@@ -97,25 +97,25 @@ a {
 
 
 /*---------- BUTTON STYLING ----------*/
-a.btn {
+.btn {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
     padding: 0.75rem;
     background-color: var(--black);
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: var(--off-white);
     margin: 0.75rem;
     box-shadow: -2px -2px 5px var(--off-white) inset;
 }
 
-a.btn:hover {
+.btn:hover {
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
     padding: 0.75rem;
     background-color: var(--off-white);
-    border-radius: 1rem;
+    border-radius: 2rem;
     color: var(--black);
     margin: 0.75rem;
     box-shadow: -2px -2px 5px var(--black) inset;
@@ -123,12 +123,12 @@ a.btn:hover {
 }
 
 /* Next Button - Styled so it can be differentiated from the answer buttons */
-#next {
+.next-btn {
     background-color: var(--off-white);
     color: var(--black);
 }
 
-#next:hover {
+.next-btn:hover {
     background-color: var(--black);
     color: var(--off-white);
 }
@@ -215,7 +215,7 @@ p {
     padding-bottom: 1.5rem;
 }
 
-a.btn, a.btn:hover {
+btn, btn:hover {
     font-size: 1.125rem;
     margin: 0.75rem;
 }
@@ -245,7 +245,7 @@ p {
     padding-bottom: 1.5rem;
 }
 
-a.btn, a.btn:hover {
+ btn, btn:hover {
     font-size: 1.25rem;
     margin: 0.75rem;
 }
