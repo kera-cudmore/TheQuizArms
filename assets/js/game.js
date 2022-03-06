@@ -61,23 +61,19 @@ function checkAnswer(e) {
         //add class incorrect (class to be made)
         document.getElementById("outer-container").classList.add("incorrect");
     }
-}
-/*
+  //removes hide class from the next button to display
+  document.getElementById("next").classList.remove("hide")
+  document.getElementById("next").addEventListener("click", nextQuestion);
 
-// if questions less than 15 display next button
-next.classList.remove("hide");
-// if answers =15 show end game page
 
-// remove data-correct from button
 }
 
-/*
+
 // NEXT QUESTION FUNCTION - run when next button pressed
-function nextQuestion() {
-    
-    // run start game again?
+function nextQuestion(e) {
+  console.log("next question");
 };
-*/
+
 
 // START GAME FUNCTION
 function startGame(data) {
@@ -115,12 +111,3 @@ function startGame(data) {
 // CHOOSE DIFFICULTY - EVENT LISTENERS
 // change so the button selected calls the api and adds the correct url into fetch
 easy.addEventListener("click", callApi);
-/*
-medium.addEventListener("click", callApi);
-hard.addEventListener("click", callApi);
-*/
-
-/*
-const difficultyButtons = document.querySelectorAll(".difficulty")
-difficultyButtons.forEach(x => x.setAttribute("onclick", "callApi(this.id)"))
-*/
