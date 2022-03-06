@@ -11,6 +11,7 @@ const medium = document.getElementById("medium");
 const hard = document.getElementById("hard");
 
 //game page buttons
+const score = document.getElementById("score");
 const question = document.getElementById("question");
 const answer1 = document.getElementById("answer1")
 const answer2 = document.getElementById("answer2")
@@ -18,6 +19,7 @@ const answer3 = document.getElementById("answer3")
 const answer4 = document.getElementById("answer4")
 const next = document.getElementById("next");
 const answerButtons = document.getElementsByClassName("answer-text");
+
 
 // HIDE DIFFICULTY SECTION FUNCTION
 function hideDifficulty() {
@@ -48,22 +50,32 @@ async function callApi() {
 }
 
 
+// increase score function
+function increaseScore() {
+  let oldScore = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = oldScore + 10;
+
+}
+
+
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
     console.log(e);
     // check if item clicked has the dataset of correct
     if (e.target.dataset.correct) {
-        console.log("Right answer");
-        // add the correct answer css
-        document.getElementById("outer-container").classList.add("correct");
+      console.log("Right answer");
+      // add the correct answer css
+      document.getElementById("outer-container").classList.add("correct");
+    //add to the score counter
+    increaseScore();
     } else {
         console.log("wrong answer");
         //add class incorrect (class to be made)
         document.getElementById("outer-container").classList.add("incorrect");
     }
-  //removes hide class from the next button to display
-  document.getElementById("next").classList.remove("hide")
-  document.getElementById("next").addEventListener("click", nextQuestion);
+    //removes hide class from the next button to display
+    document.getElementById("next").classList.remove("hide")
+    document.getElementById("next").addEventListener("click", nextQuestion);
 
 
 }
@@ -71,12 +83,13 @@ function checkAnswer(e) {
 
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion(e) {
-  console.log("next question");
+    console.log("next question");
 };
 
 
 // START GAME FUNCTION
 function startGame(data) {
+
     //hides the next button
     const results = data.results[0];
     // adds the question to the site
