@@ -317,3 +317,5 @@ I also went through each page using google chrome developer tools to ensure that
 I would like to acknowledge the following people who helped me along the way in completing this project:
 
 * Adegbenga  Adeye - My Code Institute Mentor.
+
+* [Dave Horrocks](https://github.com/daveyjh) - For taking the time to walk through my code with me when I was struggling with adding event listeners.
