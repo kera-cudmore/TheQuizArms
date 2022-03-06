@@ -146,7 +146,7 @@ a {
 
 /* Styling for incorrect choice */
 .incorrect {
-    background-color: var(--red) 1rem solid;
+    border: var(--red) 1rem solid;
 }
 
 
