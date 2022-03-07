@@ -61,10 +61,16 @@ a {
     text-decoration: none;
 }
 
-.score-area {
-text-align: right;
-font-size: 1.5rem;
+.counter-area {
+    font-size: 1.5rem;
+    align-content: left;
 }
+
+p.answer-count {
+    padding-bottom: 1rem;
+}
+
+
 /*---------- CONTAINERS ----------*/
 /* Flex container*/
 .flex-container {
