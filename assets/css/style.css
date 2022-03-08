@@ -36,7 +36,7 @@ font-family: var(--content-text);
 /* Page Title */
  h1 {
     font-family: var(--header-text);
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 700;
     font-style: italic;
     color: var(--off-white);
@@ -45,7 +45,7 @@ font-family: var(--content-text);
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     font-weight: 500;
     padding-bottom: 3rem;
@@ -53,7 +53,7 @@ h2 {
 
 p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-bottom: 3rem;
 }
 
@@ -61,12 +61,7 @@ a {
     text-decoration: none;
 }
 
-.counter-area {
-    font-size: 1.5rem;
-    align-content: left;
-}
-
-p.answer-count {
+p.answer-count, p.score-area {
     padding-bottom: 1rem;
 }
 
@@ -109,7 +104,7 @@ p.answer-count {
 /*---------- BUTTON STYLING ----------*/
 .btn {
     font-family: var(--content-text);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
     padding: 0.75rem;
