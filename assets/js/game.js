@@ -57,12 +57,12 @@ function increaseScore() {
 
 }
 
-/*
+
 // NEXT QUESTION FUNCTION - run when next button pressed
-function nextQuestion() {
+function nextQuestion(e) {
   console.log("next question");
 }
-*/
+
 
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
@@ -85,7 +85,7 @@ function checkAnswer(e) {
 
     //removes hide class from the next button to display
     document.getElementById("next").classList.remove("hide");
-    document.getElementById("next").addEventListener("click", console.log("next button"));
+    document.getElementById("next").addEventListener("click", nextQuestion);
 }
 
 
