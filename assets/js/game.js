@@ -13,10 +13,10 @@ const hard = document.getElementById("hard");
 //game page buttons
 const score = document.getElementById("score");
 const question = document.getElementById("question");
-const answer1 = document.getElementById("answer1")
-const answer2 = document.getElementById("answer2")
-const answer3 = document.getElementById("answer3")
-const answer4 = document.getElementById("answer4")
+const answer1 = document.getElementById("answer1");
+const answer2 = document.getElementById("answer2");
+const answer3 = document.getElementById("answer3");
+const answer4 = document.getElementById("answer4");
 const next = document.getElementById("next");
 const answerButtons = document.getElementsByClassName("answer-text");
 
@@ -46,7 +46,7 @@ async function callApi() {
 
   // hides the difficulty box and runs start game function with data called
   hideDifficulty();
-  startGame(data);
+  getQuestion(data);
 }
 
 
@@ -57,19 +57,12 @@ function increaseScore() {
 
 }
 
-
+/*
 // NEXT QUESTION FUNCTION - run when next button pressed
-function nextQuestion(e) {
+function nextQuestion() {
   console.log("next question");
-  // Remove the attribute on correct question ready for the next question
-  
-  //if the question no <15
-  //access the results + 1 
-  //add question to html
-  //add answ
-
-};
-
+}
+*/
 
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
@@ -81,46 +74,60 @@ function checkAnswer(e) {
     document.getElementById("outer-container").classList.add("correct");
     //add to the score counter
     increaseScore();
+    // Remove the attribute on correct question ready for the next question
+    e.target.removeAttribute("data-correct", "true");
+
   } else {
         console.log("wrong answer");
         //add class incorrect (class to be made)
         document.getElementById("outer-container").classList.add("incorrect");
   }
+
     //removes hide class from the next button to display
-    document.getElementById("next").classList.remove("hide")
-    document.getElementById("next").addEventListener("click", nextQuestion);
+    document.getElementById("next").classList.remove("hide");
+    document.getElementById("next").addEventListener("click", console.log("next button"));
 }
 
 
-// START GAME FUNCTION
-function startGame(data) {    
-  const results = data.results[0];
-  // adds the question to the site
-  document.getElementById("question").innerHTML = results.question;
+// GET QUESTION FUNCTION
+function getQuestion(data) { 
+      document.getElementById("next").classList.add("hide");
 
-  const correctAnswer = results.correct_answer;
+   
+  let results = data.results[0];
 
-  // Create an array that holds all the answer choices for the question
-  const answers = [...results.incorrect_answers, correctAnswer];
 
-  // answers array shuffled & added to answer buttons  (condensed using interation)
-  arrayShuffle(answers);
+    if (results <= data.results[14]) {
 
-  answer1.innerText = `${answers[0]}`;
-  answer2.innerText = `${answers[1]}`;
-  answer3.innerText = `${answers[2]}`;
-  answer4.innerText = `${answers[3]}`;
-  console.log(correctAnswer);
+      // adds the question to the site
+      document.getElementById("question").innerHTML = results.question;
 
-  // loops through to check for correct answer & adds data attribute to the correct answer 
-  for (let button of answerButtons) {
-    if (button.innerText === correctAnswer) {
-      button.setAttribute("data-correct", "true")
-      console.log(button);
-    }
-    // adds event listener to each button & on click runs check answer function
-    button.addEventListener("click", checkAnswer);
-  }
+      const correctAnswer = results.correct_answer;
+
+      // Create an array that holds all the answer choices for the question
+      const answers = [...results.incorrect_answers, correctAnswer];
+
+      // answers array shuffled & added to answer buttons  (condensed using interation)
+      arrayShuffle(answers);
+
+      answer1.innerText = `${answers[0]}`;
+      answer2.innerText = `${answers[1]}`;
+      answer3.innerText = `${answers[2]}`;
+      answer4.innerText = `${answers[3]}`;
+      console.log(correctAnswer);
+
+      // loops through to check for correct answer & adds data attribute to the correct answer 
+      for (let button of answerButtons) {
+        if (button.innerText === correctAnswer) {
+          button.setAttribute("data-correct", "true");
+          console.log(button);
+        }
+        // adds event listener to each button & on click runs check answer function
+        button.addEventListener("click", checkAnswer);
+      }
+    } else {
+      console.log("No more questions");
+      }
 }
 
 
