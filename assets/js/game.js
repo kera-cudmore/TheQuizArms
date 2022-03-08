@@ -23,30 +23,30 @@ const answerButtons = document.getElementsByClassName("answer-text");
 
 // HIDE DIFFICULTY SECTION FUNCTION
 function hideDifficulty() {
-    document.getElementById("difficulty").classList.add("hide");
-    document.getElementById("quiz-area").classList.remove("hide");
+  document.getElementById("difficulty").classList.add("hide");
+  document.getElementById("quiz-area").classList.remove("hide");
 }
 
 
 // SHUFFLE THE ANSWERS ARRAY FUNCTION - using Fisher Yates Shuffle
 // reseached on W3Schools and adapted as shown on youtube tutorial - https://www.youtube.com/watch?v=eATLMjs7y4s&list=PL5egNEXQTWmFHAoWFVRLNAvD-9zzyWVxA&index=3
 function arrayShuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        let s = Math.floor(Math.random() * (i + 1));
-        [array[i], array[s]] = [array[s], array[i]];
-    }
+  for (let i = array.length - 1; i > 0; i--) {
+    let s = Math.floor(Math.random() * (i + 1));
+    [array[i], array[s]] = [array[s], array[i]];
+  }
 }
 
 
 //CALL API FUNCTION
 async function callApi() {
-    const response = await fetch(easyQuiz);
-    const data = await response.json();
-    console.log(data);
+  const response = await fetch(easyQuiz);
+  const data = await response.json();
+  console.log(data);
 
-    // hides the difficulty box and runs start game function with data called
-    hideDifficulty();
-    startGame(data);
+  // hides the difficulty box and runs start game function with data called
+  hideDifficulty();
+  startGame(data);
 }
 
 
@@ -58,66 +58,69 @@ function increaseScore() {
 }
 
 
-// CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
-function checkAnswer(e) {
-    console.log(e);
-    // check if item clicked has the dataset of correct
-    if (e.target.dataset.correct) {
-      console.log("Right answer");
-      // add the correct answer css
-      document.getElementById("outer-container").classList.add("correct");
-    //add to the score counter
-    increaseScore();
-    } else {
-        console.log("wrong answer");
-        //add class incorrect (class to be made)
-        document.getElementById("outer-container").classList.add("incorrect");
-    }
-    //removes hide class from the next button to display
-    document.getElementById("next").classList.remove("hide")
-    document.getElementById("next").addEventListener("click", nextQuestion);
-
-
-}
-
-
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion(e) {
-    console.log("next question");
+  console.log("next question");
+  // Remove the attribute on correct question ready for the next question
+  
+  //if the question no <15
+  //access the results + 1 
+  //add question to html
+  //add answ
+
 };
 
 
+// CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
+function checkAnswer(e) {
+  console.log(e);
+  // check if item clicked has the dataset of correct
+  if (e.target.dataset.correct) {
+    console.log("Right answer");
+    // add the correct answer css
+    document.getElementById("outer-container").classList.add("correct");
+    //add to the score counter
+    increaseScore();
+  } else {
+        console.log("wrong answer");
+        //add class incorrect (class to be made)
+        document.getElementById("outer-container").classList.add("incorrect");
+  }
+    //removes hide class from the next button to display
+    document.getElementById("next").classList.remove("hide")
+    document.getElementById("next").addEventListener("click", nextQuestion);
+}
+
+
 // START GAME FUNCTION
-function startGame(data) {
+function startGame(data) {    
+  const results = data.results[0];
+  // adds the question to the site
+  document.getElementById("question").innerHTML = results.question;
 
-    //hides the next button
-    const results = data.results[0];
-    // adds the question to the site
-    document.getElementById("question").innerHTML = results.question;
+  const correctAnswer = results.correct_answer;
 
-    const correctAnswer = results.correct_answer;
+  // Create an array that holds all the answer choices for the question
+  const answers = [...results.incorrect_answers, correctAnswer];
 
-    // Create an array that holds all the answer choices for the question
-    const answers = [...results.incorrect_answers, correctAnswer];
+  // answers array shuffled & added to answer buttons  (condensed using interation)
+  arrayShuffle(answers);
 
-    // answers array shuffled & added to answer buttons (can this be condensed?)
-    arrayShuffle(answers);
+  answer1.innerText = `${answers[0]}`;
+  answer2.innerText = `${answers[1]}`;
+  answer3.innerText = `${answers[2]}`;
+  answer4.innerText = `${answers[3]}`;
+  console.log(correctAnswer);
 
-    answer1.innerText = `${answers[0]}`;
-    answer2.innerText = `${answers[1]}`;
-    answer3.innerText = `${answers[2]}`;
-    answer4.innerText = `${answers[3]}`;
-    console.log(correctAnswer);
-
-    // loops through to check for correct answer & adds data attribute to the correct answer 
-    for (let button of answerButtons) {
-        if (button.innerText === correctAnswer) {
-            button.setAttribute("data-correct", "true")
-            console.log(button);
-        }
-        // adds event listener to each button & on click runs check answer function
-        button.addEventListener("click", checkAnswer);
+  // loops through to check for correct answer & adds data attribute to the correct answer 
+  for (let button of answerButtons) {
+    if (button.innerText === correctAnswer) {
+      button.setAttribute("data-correct", "true")
+      console.log(button);
     }
+    // adds event listener to each button & on click runs check answer function
+    button.addEventListener("click", checkAnswer);
+  }
 }
 
 
