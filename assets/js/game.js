@@ -103,7 +103,6 @@ function checkAnswer(e) {
 function getQuestion(data) { 
   document.getElementById("next").classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
-  console.log(questionNo);
   let results = data.results[questionNo];
   //if(!results || results.length < questionNo) return;
 
@@ -136,13 +135,17 @@ function getQuestion(data) {
     }
     questionNo++;
   } else {
-    // display final screen
-    // insert the final score
-    // do you want to log your score to high scores?
     console.log("No more questions");
+
+    // display final screen
     document.getElementById("quiz-area").classList.add("hide");
     document.getElementById("end-area").classList.remove("hide");
+
+    // insert the final score
     document.getElementById("final-score").innerText = `${score}`;
+
+    // do you want to log your score to high scores?
+
 
     }
     } 
