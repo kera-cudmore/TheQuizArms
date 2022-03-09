@@ -15,7 +15,7 @@ const hard = document.getElementById("hard");
 let questionNo = 0;
 
 const questionNumber = document.getElementById("answer-no");
-const score = document.getElementById("score");
+let score = document.getElementById("score").innerText;
 
 const question = document.getElementById("question");
 const answer1 = document.getElementById("answer1");
@@ -58,8 +58,8 @@ async function callApi() {
 
 // increase score function
 function increaseScore() {
-  let oldScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = oldScore + 10;
+  score = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = score + 10;
 
 }
 
@@ -103,10 +103,11 @@ function checkAnswer(e) {
 function getQuestion(data) { 
   document.getElementById("next").classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
+  console.log(questionNo);
   let results = data.results[questionNo];
-  if(!results || results.length < questionNo) return;
+  //if(!results || results.length < questionNo) return;
 
-  if (questionNo <= 15) {
+  if (questionNo <= 14) {
     // adds the question to the site
     document.getElementById("question").innerHTML = results.question;
 
@@ -135,7 +136,14 @@ function getQuestion(data) {
     }
     questionNo++;
   } else {
+    // display final screen
+    // insert the final score
+    // do you want to log your score to high scores?
     console.log("No more questions");
+    document.getElementById("quiz-area").classList.add("hide");
+    document.getElementById("end-area").classList.remove("hide");
+    document.getElementById("final-score").innerText = `${score}`;
+
     }
     } 
 
