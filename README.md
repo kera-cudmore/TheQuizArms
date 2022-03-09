@@ -276,9 +276,10 @@ jshint images or links to go here
 
 ### Solved Bugs
 
-| Bug | How I solved the issue |
-| :--- | :--- |
-| text here | text here |
+| No | Bug | How I solved the issue |
+| :--- | :--- | :--- |
+| 1 | An error was displaying in the console when next was clicked after the first question, stating that results wasn't defined. | Data was defined in the callApi(), so couldn't be accessed as it was in local scope rather than global scope. By defining data globally and then passing the data as a parameter into the getQuestion() in the nextQuestion() solved this. |
+| NO | TEXT HERE | TEXT HERE |
 
 ### Known Bugs
 
