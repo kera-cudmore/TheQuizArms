@@ -1,5 +1,6 @@
 // DECLARING CONSTANTS
 // api
+let data = {};
 const easyQuiz = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple";
 const mediumQuiz = "https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple";
 const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
@@ -46,7 +47,7 @@ function arrayShuffle(array) {
 //CALL API FUNCTION
 async function callApi() {
   const response = await fetch(easyQuiz);
-  const data = await response.json();
+  data = await response.json();
   console.log(data);
 
   // hides the difficulty box and runs start game function with data called
@@ -66,7 +67,9 @@ function increaseScore() {
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion(e) {
   console.log("next question");
-  getQuestion();
+  let oldAnswerNo = parseInt(document.getElementById("answer-no").innerText);
+  document.getElementById("answer-no").innerText = oldAnswerNo + 1;
+  getQuestion(data);
 }
 
 
@@ -99,10 +102,11 @@ function checkAnswer(e) {
 // GET QUESTION FUNCTION
 function getQuestion(data) { 
   document.getElementById("next").classList.add("hide");
+  document.getElementById("outer-container").classList.remove("correct", "incorrect");
+  let results = data.results[questionNo];
+  if(!results || results.length < questionNo) return;
 
-  let results = data.results[0];
-
-  if (questionNo <= 14) {
+  if (questionNo <= 15) {
     // adds the question to the site
     document.getElementById("question").innerHTML = results.question;
 
@@ -111,7 +115,7 @@ function getQuestion(data) {
     // Create an array that holds all the answer choices for the question
     const answers = [...results.incorrect_answers, correctAnswer];
 
-    // answers array shuffled & added to answer buttons  (condensed using interation)
+    // answers array shuffled & added to answer buttons  (condense using interation)
      arrayShuffle(answers);
 
     answer1.innerText = `${answers[0]}`;
@@ -129,6 +133,7 @@ function getQuestion(data) {
       // adds event listener to each button & on click runs check answer function
       button.addEventListener("click", checkAnswer);
     }
+    questionNo++;
   } else {
     console.log("No more questions");
     }
