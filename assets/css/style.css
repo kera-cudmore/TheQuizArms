@@ -48,7 +48,8 @@ h2 {
     font-size: 2rem;
     text-align: center;
     font-weight: 500;
-    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 p {
@@ -98,6 +99,12 @@ p.answer-count, p.score-area {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+/* Counter Area - holds Question No & Score on Game Page */
+#counter-area {
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -207,7 +214,7 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 p {
@@ -236,7 +243,7 @@ h1 {
     padding: 1.5rem;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     padding-bottom: 1rem;
 }
 
