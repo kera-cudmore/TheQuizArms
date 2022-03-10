@@ -60,8 +60,8 @@ async function callApi() {
 
 // increase score function
 function increaseScore() {
-  score++;
-
+  score+=10;
+scoreCounter.innerText = `${score}`;
 
   /*score = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerText = score + 10;
