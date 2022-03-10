@@ -279,6 +279,7 @@ jshint images or links to go here
 | No | Bug | How I solved the issue |
 | :--- | :--- | :--- |
 | 1 | An error was displaying in the console when next was clicked after the first question, stating that results wasn't defined. | Data was defined in the callApi(), so couldn't be accessed as it was in local scope rather than global scope. By defining data globally and then passing the data as a parameter into the getQuestion() in the nextQuestion() solved this. |
+| 2 | The Questions being pulled in from the JSON have characters that are not escaped and therefore display incorrectly with symbols in place of the correct characters. ![Characters not escaping correctly in the JSON data](documentation/characters-not-escaped.webp) | HOW DID I SOLVE |
 | NO | TEXT HERE | TEXT HERE |
 
 ### Known Bugs
