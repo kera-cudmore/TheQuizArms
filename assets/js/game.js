@@ -1,33 +1,35 @@
-// DECLARING CONSTANTS
-// api
 let data = {};
+let questionNo = 0;
+
+// API
 const easyQuiz = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple";
 const mediumQuiz = "https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple";
 const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 
 
-// difficulty buttons
+// DIFFICULTY BUTTONS
 const easy = document.getElementById("easy");
 const medium = document.getElementById("medium");
 const hard = document.getElementById("hard");
 
-//game page buttons
-let questionNo = 0;
+//GAME PAGE
+// Counter Area - Scores & Question Number
+let questionCounter = 1;
+let questionNumber = document.getElementById("answer-no");
+let score = 0;
+let scoreCounter = document.getElementById("score");
 
-const questionNumber = document.getElementById("answer-no");
-let score = document.getElementById("score").innerText;
-
+// Quiz Area
 const question = document.getElementById("question");
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 const answerButtons = document.getElementsByClassName("answer-text");
-
 const next = document.getElementById("next");
 
 
-// HIDE DIFFICULTY SECTION FUNCTION
+// HIDE DIFFICULTY FUNCTION
 function hideDifficulty() {
   document.getElementById("difficulty").classList.add("hide");
   document.getElementById("quiz-area").classList.remove("hide");
@@ -58,18 +60,27 @@ async function callApi() {
 
 // increase score function
 function increaseScore() {
-  score = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = score + 10;
+  score++;
 
+
+  /*score = parseInt(document.getElementById("score").innerText);
+  document.getElementById("score").innerText = score + 10;
+*/
 }
 
 
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion(e) {
   console.log("next question");
+  questionCounter++;
+  questionNumber.innerText = `${questionCounter}`;
+
+  /*
   let oldAnswerNo = parseInt(document.getElementById("answer-no").innerText);
   document.getElementById("answer-no").innerText = oldAnswerNo + 1;
+  */
   getQuestion(data);
+
 }
 
 
