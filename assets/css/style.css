@@ -126,7 +126,10 @@ p.answer-count, p.score-area {
     background-color: var(--off-white);
     color: var(--black);
     box-shadow: -2px -2px 5px var(--black) inset;
-    cursor: grab
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
 }
 
 /* Next Button - Styled so it can be differentiated from the answer buttons */
@@ -139,6 +142,26 @@ p.answer-count, p.score-area {
     background-color: var(--black);
     color: var(--off-white);
 }
+
+
+/*---------- HIGH SCORES FORM----------*/
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-family: var(--content-text);
+  font-size: 1.25rem;
+  color: var(--grey);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  border-radius: 2rem;
+  text-align: center;
+}
+
 
 /*---------- CLASSES TO BE ADDED AND REMOVED ----------*/
 /* Hide from display */
