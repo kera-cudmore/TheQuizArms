@@ -167,6 +167,7 @@ function getQuestion(data) {
     } 
 
 
+
 // adds event listener to the teamname input field on keyup
   teamName.addEventListener("keyup", () => {
   //shows the value typed into the input field
@@ -176,7 +177,7 @@ function getQuestion(data) {
 })
 
 
-
+// Saving to local storage - https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 // SAVE HIGH SCORE FUNCTION
 function saveHighScore(e) {
   console.log("save high score");
