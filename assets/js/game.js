@@ -162,7 +162,7 @@ function getQuestion(data) {
     document.getElementById("end-area").classList.remove("hide");
 
     // insert the final score
-    finalScore.innerText = mostRecentScore;
+    finalScore.innerText = `${score}`;
     }
     } 
 
