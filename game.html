@@ -73,13 +73,23 @@
       </div>
     </div>
 
+    
     <!--End Quiz & Final Score Container-->
-    <div id="end-area" class="hide">
-      <h2>Congratulations, You have completed the Quiz!</h2>
-      <p>You Scored: <span id="final-score"></span></p>
-      
-    </div>
+  <div id="end-area" class="hide">
+    <h2>You Scored: <span id="final-score"></span></h2>
+    <p>Congratulations on completing the quiz!</p>
+    <p>Want to save your score?</p>
+      <p>Fill in your team name below and submit your score.</p>
+    <form>
+      <input type="text" id="teamname" placeholder="Team Name">
+      <button class="btn" type="submit" id="submitscorebtn" onclick="saveHighScore(event)" disabled>Submit</button>
+      </form>
+      <div class=" btn-group">
+      <a href="game.html" class="btn">Play Again?</a>
+      <a href="index.html" class="btn">Home</a>
+      </div>
 
+  </div>
 
 
   </div>
