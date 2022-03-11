@@ -28,6 +28,13 @@ const answer4 = document.getElementById("answer4");
 const answerButtons = document.getElementsByClassName("answer-text");
 const next = document.getElementById("next");
 
+// End Game Area
+const finalScore = document.getElementById("final-score");
+const teamName = document.getElementById("teamname");
+const submitScoreBtn = document.getElementById("submitscorebtn");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+
 
 // HIDE DIFFICULTY FUNCTION
 function hideDifficulty() {
@@ -58,7 +65,7 @@ async function callApi() {
 }
 
 
-// increase score function
+// INCREASE SCORE FUNCTION
 function increaseScore() {
   score+=10;
 scoreCounter.innerText = `${score}`;
@@ -118,6 +125,8 @@ function getQuestion(data) {
   //if(!results || results.length < questionNo) return;
 
   if (questionNo <= 14) {
+    //adds the score to local storage
+    localStorage.setItem("mostRecentScore", score);
     // adds the question to the site
     document.getElementById("question").innerHTML = results.question;
 
@@ -153,17 +162,38 @@ function getQuestion(data) {
     document.getElementById("end-area").classList.remove("hide");
 
     // insert the final score
-    document.getElementById("final-score").innerText = `${score}`;
-
-    // do you want to log your score to high scores?
-
-
+    finalScore.innerText = mostRecentScore;
     }
     } 
 
+
+// adds event listener to the teamname input field on keyup
+  teamName.addEventListener("keyup", () => {
+  //shows the value typed into the input field
+  console.log(teamName.value);
+  //if there is nothing in the input field it disabled the submit score button
+  submitScoreBtn.disabled = !teamName.value;
+})
+
+
+
+// SAVE HIGH SCORE FUNCTION
+function saveHighScore(e) {
+  console.log("save high score");
+  e.preventDefault();
+
+  const highScoreLog = {
+    score: mostRecentScore,
+    name: teamName.value
+  }
+  highScores.push(highScoreLog);
+  console.log(highScores);
+
+};
 
 
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
 // change so the button selected calls the api and adds the correct url into fetch
 easy.addEventListener("click", callApi);
+
