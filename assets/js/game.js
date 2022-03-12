@@ -174,6 +174,21 @@ function getQuestion(data) {
 //HIGH SCORES STORAGE AND RETRIVAL SECTION
 //tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 
+
+
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
+//get the high scores array from local storage - OR - get empty array if there isn't one
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
+
+const MAX_HIGH_SCORES = 5;
+
+
+
+
+
+
 // adds event listener to the teamname input field on keyup
   teamName.addEventListener("keyup", () => {
   //shows the value typed into the input field
@@ -187,8 +202,6 @@ function getQuestion(data) {
 submitScoreBtn.addEventListener("click", saveHighScore);
 
 
-const mostRecentScore = localStorage.getItem("mostRecentScore");
-
 
 // SAVE HIGH SCORE FUNCTION
 function saveHighScore(e) {
@@ -196,6 +209,28 @@ function saveHighScore(e) {
   // prevents the form opening new page which it does by default
   e.preventDefault();
 
+  // creating scoreLog object that will hold the team name and the score
+  const scoreLog = {
+    name: teamName.value,
+    score: mostRecentScore
+  }
+
+  // pushes the scoreLog object into the highScores array
+  highScores.push(scoreLog);
+
+  //sorts the array by score
+  highScores.sort((a,b) => b.score - a.score)
+
+  // cuts off the array at the max high scores number
+  highScores.splice(MAX_HIGH_SCORES);
+
+  // saves the highscore array to local storage 
+  localStorage.setItem("highScores", JSON.stringify(highScores));
+
+  // opens the highscores.html page
+  window.location.assign("highscores.html");
+
+console.log(highScores);
 
 };
 
