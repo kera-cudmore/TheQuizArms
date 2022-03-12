@@ -66,6 +66,16 @@ p.answer-count, p.score-area {
     padding-bottom: 1rem;
 }
 
+#highscoreslist {
+  list-style: none;
+}
+
+li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 0.25rem;
+}
+
 
 /*---------- CONTAINERS ----------*/
 /* Flex container*/
@@ -144,6 +154,23 @@ p.answer-count, p.score-area {
 }
 
 
+/*---------- CLASSES TO ADD AND REMOVE ----------*/
+/* Hide from display */
+.hide {
+    display: none;
+}
+
+/* Styling for correct choice */
+.correct {
+    border: var(--green) 1rem solid ;
+}
+
+/* Styling for incorrect choice */
+.incorrect {
+    border: var(--red) 1rem solid;
+}
+
+
 /*---------- HIGH SCORES FORM----------*/
 
 form {
@@ -160,23 +187,6 @@ input {
   width: 100%;
   border-radius: 2rem;
   text-align: center;
-}
-
-
-/*---------- CLASSES TO BE ADDED AND REMOVED ----------*/
-/* Hide from display */
-.hide {
-    display: none;
-}
-
-/* Styling for correct choice */
-.correct {
-    border: var(--green) 1rem solid ;
-}
-
-/* Styling for incorrect choice */
-.incorrect {
-    border: var(--red) 1rem solid;
 }
 
 
@@ -245,6 +255,9 @@ p {
     padding-bottom: 1.5rem;
 }
 
+li {
+  font-size: 1.25rem;
+}
 .btn {
     font-size: 1.25rem;
     margin: 0.75rem;
