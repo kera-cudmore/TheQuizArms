@@ -279,8 +279,8 @@ jshint images or links to go here
 | No | Bug | How I solved the issue |
 | :--- | :--- | :--- |
 | 1 | An error was displaying in the console when next was clicked after the first question, stating that results wasn't defined. | Data was defined in the callApi(), so couldn't be accessed as it was in local scope rather than global scope. By defining data globally and then passing the data as a parameter into the getQuestion() in the nextQuestion() solved this. |
-| 2 | The Questions being pulled in from the JSON have characters that are not escaped and therefore display incorrectly with symbols in place of the correct characters. ![Characters not escaping correctly in the JSON data](documentation/characters-not-escaped.webp) | HOW DID I SOLVE |
-| NO | TEXT HERE | TEXT HERE |
+| 2 | The Questions being pulled in from the JSON have characters that are not escaped and therefore display incorrectly with symbols in place of the correct characters. ![Characters not escaping correctly in the JSON data](documentation/characters-not-escaped.webp) | After a lot of research into escaping characters, I came across a post on slack that mentioned using innerHTML rather than innerText. Once I changed the answers to innerHTML the characters are now displaying correctly. |
+| 3 | I have the local storage set up to save the final score as mostRecentScore. However when completing a game and submitting the team name the score added to the high scores section would be the previous score and not the most recent score. | TEXT HERE |
 
 ### Known Bugs
 
