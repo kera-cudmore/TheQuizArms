@@ -112,8 +112,8 @@ function checkAnswer(e) {
   }
 
     //removes hide class from the next button to display
-    document.getElementById("next").classList.remove("hide");
-    document.getElementById("next").addEventListener("click", nextQuestion);
+    next.classList.remove("hide");
+    next.addEventListener("click", nextQuestion);
     e.target.removeAttribute("data-correct", "true");
   }
 
@@ -121,7 +121,7 @@ function checkAnswer(e) {
 
 // GET QUESTION FUNCTION
 function getQuestion(data) { 
-  document.getElementById("next").classList.add("hide");
+  next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
   let results = data.results[questionNo];
   //if(!results || results.length < questionNo) return;
@@ -130,7 +130,7 @@ function getQuestion(data) {
 
 
     // adds the question to the site
-    document.getElementById("question").innerHTML = results.question;
+    question.innerHTML = results.question;
 
     const correctAnswer = results.correct_answer;
 
@@ -175,9 +175,6 @@ function getQuestion(data) {
 
 //HIGH SCORES STORAGE AND RETRIVAL SECTION
 //tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
-
-
-
 
 //get the high scores array from local storage - OR - get empty array if there isn't one
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
