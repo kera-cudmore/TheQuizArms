@@ -187,7 +187,7 @@ console.log(highScores);
   console.log(teamName.value);
   //if there is nothing in the input field it disabled the submit score button
   submitScoreBtn.disabled = !teamName.value;
-})
+});
 
 
 // event listener on the Submit high score button on end game page - on click runs the saveHighScore function
@@ -205,13 +205,13 @@ function saveHighScore(e) {
   const scoreLog = {
     name: teamName.value,
     score: mostRecentScore
-  }
+  };
 
   // pushes the scoreLog object into the highScores array
   highScores.push(scoreLog);
 
   //sorts the array by score
-  highScores.sort((a,b) => b.score - a.score)
+  highScores.sort((a,b) => b.score - a.score);
 
   // cuts off the array at the max high scores number
   highScores.splice(MAX_HIGH_SCORES);
@@ -224,7 +224,7 @@ function saveHighScore(e) {
 
 console.log(highScores);
 
-};
+}
 
 
 
