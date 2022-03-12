@@ -32,8 +32,8 @@ const next = document.getElementById("next");
 const finalScore = document.getElementById("final-score");
 const teamName = document.getElementById("teamname");
 const submitScoreBtn = document.getElementById("submitscorebtn");
-const mostRecentScore = localStorage.getItem("mostRecentScore");
-const highScores = JSON.parse(localStorage.getItem("highscores")) || [];
+
+
 
 
 // HIDE DIFFICULTY FUNCTION
@@ -125,8 +125,8 @@ function getQuestion(data) {
   //if(!results || results.length < questionNo) return;
 
   if (questionNo <= 14) {
-    //adds the score to local storage
-    localStorage.setItem("mostRecentScore", score);
+
+
     // adds the question to the site
     document.getElementById("question").innerHTML = results.question;
 
@@ -163,10 +163,16 @@ function getQuestion(data) {
 
     // insert the final score
     finalScore.innerText = `${score}`;
+
+    //adds the final score to local storage
+    localStorage.setItem("mostRecentScore", score);
+
     }
     } 
 
 
+//HIGH SCORES STORAGE AND RETRIVAL SECTION
+//tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 
 // adds event listener to the teamname input field on keyup
   teamName.addEventListener("keyup", () => {
@@ -177,18 +183,19 @@ function getQuestion(data) {
 })
 
 
-// Saving to local storage - https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
+// event listener on the Submit high score button on end game page - on click runs the saveHighScore function
+submitScoreBtn.addEventListener("click", saveHighScore);
+
+
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
+
 // SAVE HIGH SCORE FUNCTION
 function saveHighScore(e) {
   console.log("save high score");
+  // prevents the form opening new page which it does by default
   e.preventDefault();
 
-  const highScoreLog = {
-    score: mostRecentScore,
-    name: teamName.value
-  }
-  highScores.push(highScoreLog);
-  console.log(highScores);
 
 };
 
