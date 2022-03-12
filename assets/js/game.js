@@ -140,10 +140,10 @@ function getQuestion(data) {
     // answers array shuffled & added to answer buttons  (condense using interation)
      arrayShuffle(answers);
 
-    answer1.innerText = `${answers[0]}`;
-    answer2.innerText = `${answers[1]}`;
-    answer3.innerText = `${answers[2]}`;
-    answer4.innerText = `${answers[3]}`;
+    answer1.innerHTML = `${answers[0]}`;
+    answer2.innerHTML = `${answers[1]}`;
+    answer3.innerHTML = `${answers[2]}`;
+    answer4.innerHTML = `${answers[3]}`;
     console.log(correctAnswer);
 
     // loops through to check for correct answer & adds data attribute to the correct answer 
@@ -229,6 +229,6 @@ console.log(highScores);
 
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
-// change so the button selected calls the api and adds the correct url into fetch
+// change so the button selected calls the api and adds the correct url into fetch - use the buttons id to select right one?
 easy.addEventListener("click", callApi);
 
