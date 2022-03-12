@@ -31,10 +31,12 @@ const next = document.getElementById("next");
 // End Game Area
 const finalScore = document.getElementById("final-score");
 const teamName = document.getElementById("teamname");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
 const submitScoreBtn = document.getElementById("submitscorebtn");
 
 
-
+// High Scores
+const MAX_HIGH_SCORES = 10;
 
 // HIDE DIFFICULTY FUNCTION
 function hideDifficulty() {
@@ -176,17 +178,10 @@ function getQuestion(data) {
 
 
 
-const mostRecentScore = localStorage.getItem("mostRecentScore");
 
 //get the high scores array from local storage - OR - get empty array if there isn't one
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
-
-const MAX_HIGH_SCORES = 5;
-
-
-
-
 
 
 // adds event listener to the teamname input field on keyup
