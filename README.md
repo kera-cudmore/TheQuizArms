@@ -308,7 +308,17 @@ I also went through each page using google chrome developer tools to ensure that
 
 ### Code Used
 
+As the JavaScript modules of the Code Institute Diploma did not cover local storage, I had to do a bit of research into this topic myself in order to set up the high scores section of my site.
+
+* I used this [video tutorial](https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9) on YouTube by [James Q Quick](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw) which allowed me to save the team name and score to an object, that would then be saved into an array in local storage. It also explained how to sort the items in the array into descending score order, and then to splice the array, I have used the MAX_HIGH_SCORES as my point to splice.
+
+* I used this [video tutorial](https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=10) on YouTube by [James Q Quick](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw) which shows how to insert the local storage into the high scores page.
+
 ### Content
+
+All questions for my site were pulled from [The Open Trivia Database](https://opentdb.com/) using their API.
+
+All other content for the site, such as introduction messages and instructions were written by myself.
 
 ### Media
 
@@ -316,8 +326,14 @@ I also went through each page using google chrome developer tools to ensure that
 
 ### Acknowledgments
 
-I would like to acknowledge the following people who helped me along the way in completing this project:
+I would like to acknowledge the following people:
 
 * Adegbenga  Adeye - My Code Institute Mentor.
 
+* Bim Williams - For being a great sounding board for me when I faced issues with moving onto the next question in the quiz.
+
 * [Dave Horrocks](https://github.com/daveyjh) - For taking the time to walk through my code with me when I was struggling with adding event listeners.
+
+* [Emanuel Silva](https://github.com/manni8436) - For cheering me on when I was struggling with the JavaScript.
+
+* The Code Institute Slack channel Peer Code Review - for taking the time to test my project and look over the code.
