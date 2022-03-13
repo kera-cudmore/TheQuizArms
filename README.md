@@ -268,10 +268,10 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-* [index.html](LINK TO IMG HERE) - Passed
-* [game.html](LINK TO IMG HERE) - No errors, 1 Warning. The warning is for an empty H2 tag. This is where the question is inserted using jQuery.
-* [highscores.html](LINK TO IMG HERE) - Passed
-* [404.html](LINK TO IMG HERE) - Passed
+* [index.html](testing/w3-index.webp) - Passed
+* [game.html](testing/w3-game.webp) - No errors, 1 Warning. The warning is for an empty H2 tag. This is where the question is inserted using jQuery.
+* [highscores.html](testing/w3-highscores.webp) - Passed
+* [404.html](testing/w3-404.webp) - Passed
 
 * [style.css](LINK TO IMG HERE) - Passed, no errors found
 
