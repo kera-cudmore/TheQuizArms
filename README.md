@@ -170,7 +170,9 @@ The 404 error page displays the sites name as a title. This also acts as a link 
 
 #### Future Implementations
 
-In future implementations I would like to give users the option to select the amount of questions in their quiz. I would also like to look into making the quiz a multiplayer game, so that it could be played by teams, which would make the quiz even more like a pub quiz.
+In future implementations I would like to give users the option to select the amount of questions in their quiz.
+
+I would also like to look into making the quiz a multiplayer game, so that it could be played by teams, which would make the quiz even more like a pub quiz.
 
 ### Accessibility
 
@@ -266,13 +268,20 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-W3C validator images or links to go here
+* [index.html](LINK TO IMG HERE) - Passed
+* [game.html](LINK TO IMG HERE) - No errors, 1 Warning. The warning is for an empty H2 tag. This is where the question is inserted using jQuery.
+* [highscores.html](LINK TO IMG HERE) - Passed
+* [404.html](LINK TO IMG HERE) - Passed
+
+* [style.css](LINK TO IMG HERE) - Passed, no errors found
 
 ### JavaScript Validator
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-jshint images or links to go here
+* [javascript.js](LINK TO IMG HERE) - Passed
+* [game.js](LINK TO IMG HERE) - Passed
+* [highscores.js](LINK TO IMG HERE) - Passed
 
 ### Solved Bugs
 
