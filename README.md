@@ -268,10 +268,10 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-* [index.html](testing/w3-index.webp) - Passed
-* [game.html](testing/w3-game.webp) - No errors, 1 Warning. The warning is for an empty H2 tag. This is where the question is inserted using jQuery.
-* [highscores.html](testing/w3-highscores.webp) - Passed
-* [404.html](testing/w3-404.webp) - Passed
+* [index.html](testing/w3/w3-index.webp) - Passed
+* [game.html](testing/w3/w3-game.webp) - No errors, 1 Warning. The warning is for an empty H2 tag. This is where the question is inserted using jQuery.
+* [highscores.html](testing/w3/w3-highscores.webp) - Passed
+* [404.html](testing/w3/w3-404.webp) - Passed
 
 * [style.css](LINK TO IMG HERE) - Passed, no errors found
 
@@ -304,6 +304,30 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 ### Lighthouse
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
+
+#### Desktop Results
+
+All pages of the site are achieving a score of 100 across the 4 categories.
+
+![index.html](testing/lighthouse/lighthouse-desktop-index.webp)
+
+![game.html](testing/lighthouse/lighthouse-desktop-game.webp)
+
+![highscores.html](testing/lighthouse/lighthouse-desktop-highscores.webp)
+
+![404.html](testing/lighthouse/lighthouse-desktop-404.webp)
+
+#### Mobile Results
+
+Each page is achieving a score of 100 for the last three categories. The performance category is achieving a score of 98 for the first three pages and a score of 99 on the 404 page.
+
+![index.html](testing/lighthouse/lighthouse-mobile-index.webp)
+
+![game.html](testing/lighthouse/lighthouse-mobile-game.webp)
+
+![highscores.html](testing/lighthouse/lighthouse-mobile-highscores.webp)
+
+![404.html](testing/lighthouse/lighthouse-mobile-404.webp)
 
 ### Full Testing
 
