@@ -96,11 +96,9 @@ function nextQuestion(e) {
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
   console.log(e);
-  
-  answer1.disabled = true;
-  answer2.disabled = true;
-  answer3.disabled = true;
-  answer4.disabled = true;
+ 
+  // Disables the answer buttons to prevent them being clicked after user answers
+  $('.answer-text').prop('disabled', true);
 
   // check if item clicked has the dataset of correct
   if (e.target.dataset.correct) {
@@ -129,10 +127,8 @@ function getQuestion(data) {
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
   
-  answer1.disabled = false;
-  answer2.disabled = false;
-  answer3.disabled = false;
-  answer4.disabled = false;
+  //Allows the answer buttons to be clicked
+  $('.answer-text').prop('disabled', false);
 
   let results = data.results[questionNo];
   //if(!results || results.length < questionNo) return;
