@@ -18,15 +18,16 @@ let apiAddress;
 let questionCounter = 1;
 let questionNumber = document.getElementById("answer-no");
 let score = 0;
+let acceptingAnswers = true;
 let scoreCounter = document.getElementById("score");
 
 // Quiz Area
 const question = document.getElementById("question");
+const answerButtons = document.getElementsByClassName("answer-text");
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
-const answerButtons = document.getElementsByClassName("answer-text");
 const next = document.getElementById("next");
 
 // End Game Area
@@ -95,6 +96,12 @@ function nextQuestion(e) {
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
   console.log(e);
+  
+  answer1.disabled = true;
+  answer2.disabled = true;
+  answer3.disabled = true;
+  answer4.disabled = true;
+
   // check if item clicked has the dataset of correct
   if (e.target.dataset.correct) {
     console.log("Right answer");
@@ -121,6 +128,12 @@ function checkAnswer(e) {
 function getQuestion(data) {
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
+  
+  answer1.disabled = false;
+  answer2.disabled = false;
+  answer3.disabled = false;
+  answer4.disabled = false;
+
   let results = data.results[questionNo];
   //if(!results || results.length < questionNo) return;
 
