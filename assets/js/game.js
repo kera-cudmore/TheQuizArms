@@ -8,7 +8,6 @@ const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=ha
 
 
 // DIFFICULTY BUTTONS
-const difficultyButtons = document.getElementsByClassName("difficulty");
 const easy = document.getElementById("easy");
 const medium = document.getElementById("medium");
 const hard = document.getElementById("hard");
