@@ -35,10 +35,8 @@ const finalScore = document.getElementById("final-score");
 const teamName = document.getElementById("teamname");
 const mostRecentScore = localStorage.getItem("mostRecentScore");
 const submitScoreBtn = document.getElementById("submitscorebtn");
-
-
-// High Scores
 const MAX_HIGH_SCORES = 10;
+
 
 // HIDE DIFFICULTY FUNCTION
 function hideDifficulty() {
@@ -58,7 +56,7 @@ function arrayShuffle(array) {
 
 
 //CALL API FUNCTION
-async function callApi(e) {
+async function callApi() {
   const response = await fetch(apiAddress);
   data = await response.json();
   console.log(data);
@@ -71,8 +69,8 @@ async function callApi(e) {
 
 // INCREASE SCORE FUNCTION
 function increaseScore() {
-  score+=10;
-scoreCounter.innerText = `${score}`;
+  score += 10;
+  scoreCounter.innerText = `${score}`;
 
   /*score = parseInt(document.getElementById("score").innerText);
   document.getElementById("score").innerText = score + 10;
@@ -108,29 +106,27 @@ function checkAnswer(e) {
     // Remove the attribute on correct question ready for the next question
 
   } else {
-        console.log("wrong answer");
-        //add class incorrect (class to be made)
-        document.getElementById("outer-container").classList.add("incorrect");
+    console.log("wrong answer");
+    //add class incorrect (class to be made)
+    document.getElementById("outer-container").classList.add("incorrect");
   }
 
-    //removes hide class from the next button to display
-    next.classList.remove("hide");
-    next.addEventListener("click", nextQuestion);
-    e.target.removeAttribute("data-correct", "true");
-  }
+  //removes hide class from the next button to display
+  next.classList.remove("hide");
+  next.addEventListener("click", nextQuestion);
+  e.target.removeAttribute("data-correct", "true");
+}
 
 
 
 // GET QUESTION FUNCTION
-function getQuestion(data) { 
+function getQuestion(data) {
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
   let results = data.results[questionNo];
   //if(!results || results.length < questionNo) return;
 
   if (questionNo <= 14) {
-
-
     // adds the question to the site
     question.innerHTML = results.question;
 
@@ -139,9 +135,8 @@ function getQuestion(data) {
     // Create an array that holds all the answer choices for the question
     const answers = [...results.incorrect_answers, correctAnswer];
 
-    // answers array shuffled & added to answer buttons  (condense using interation)
-     arrayShuffle(answers);
-
+    // answers array shuffled & added to answer buttons
+    arrayShuffle(answers);
     answer1.innerHTML = `${answers[0]}`;
     answer2.innerHTML = `${answers[1]}`;
     answer3.innerHTML = `${answers[2]}`;
@@ -170,31 +165,26 @@ function getQuestion(data) {
 
     //adds the final score to local storage
     localStorage.setItem("mostRecentScore", score);
-
-    }
-    } 
+  }
+}
 
 
 //HIGH SCORES STORAGE AND RETRIVAL SECTION
 //tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
-
 //get the high scores array from local storage - OR - get empty array if there isn't one
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 console.log(highScores);
 
-
 // adds event listener to the teamname input field on keyup
-  teamName.addEventListener("keyup", () => {
+teamName.addEventListener("keyup", () => {
   //shows the value typed into the input field
   console.log(teamName.value);
   //if there is nothing in the input field it disabled the submit score button
   submitScoreBtn.disabled = !teamName.value;
 });
 
-
 // event listener on the Submit high score button on end game page - on click runs the saveHighScore function
 submitScoreBtn.addEventListener("click", saveHighScore);
-
 
 
 // SAVE HIGH SCORE FUNCTION
@@ -213,7 +203,7 @@ function saveHighScore(e) {
   highScores.push(scoreLog);
 
   //sorts the array by score
-  highScores.sort((a,b) => b.score - a.score);
+  highScores.sort((a, b) => b.score - a.score);
 
   // cuts off the array at the max high scores number
   highScores.splice(MAX_HIGH_SCORES);
@@ -223,16 +213,11 @@ function saveHighScore(e) {
 
   // opens the highscores.html page
   window.location.assign("highscores.html");
-
-console.log(highScores);
-
+  console.log(highScores);
 }
 
 
-
 // CHOOSE DIFFICULTY - EVENT LISTENERS
-// change so the button selected calls the api and adds the correct url into fetch - use the buttons id to select right one?
-//easy.addEventListener("click", callApi);
 
 for (let button of difficultyButtons) {
   if (button.id === "easy") {
@@ -245,7 +230,7 @@ for (let button of difficultyButtons) {
 
   // adds event listener to each button & on click runs check answer function
   //button.addEventListener("click", callApi(e));
-  button.addEventListener('click', function() {
+  button.addEventListener('click', function () {
     console.log(button, apiAddress);
   });
 
