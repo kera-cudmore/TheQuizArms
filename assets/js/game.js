@@ -216,21 +216,9 @@ function saveHighScore(e) {
 }
 
 
-// CHOOSE DIFFICULTY - EVENT LISTENERS
-
-for (let button of difficultyButtons) {
-  if (button.id === "easy") {
-    apiAddress = easyQuiz;
-  } else if (button.id === "medium") {
-    apiAddress = mediumQuiz;
-  } else if (button.id === "hard") {
-    apiAddress = hardQuiz;
-  } else console.log("error with difficulty button")
 
   // adds event listener to each button & on click runs check answer function
-  //button.addEventListener("click", callApi(e));
-  button.addEventListener('click', function () {
-    console.log(button, apiAddress);
-  });
+  easy.addEventListener('click', callApi);
+  medium.addEventListener('click', callApi);
+  hard.addEventListener('click', callApi);
 
-};
