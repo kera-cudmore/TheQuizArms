@@ -103,17 +103,16 @@ function checkAnswer(e) {
     document.getElementById("outer-container").classList.add("correct");
     //add to the score counter
     increaseScore();
-    // Remove the attribute on correct question ready for the next question
 
   } else {
     console.log("wrong answer");
     //add class incorrect (class to be made)
     document.getElementById("outer-container").classList.add("incorrect");
   }
-
   //removes hide class from the next button to display
   next.classList.remove("hide");
   next.addEventListener("click", nextQuestion);
+  // Remove the attribute on correct question ready for the next question
   e.target.removeAttribute("data-correct", "true");
 }
 
