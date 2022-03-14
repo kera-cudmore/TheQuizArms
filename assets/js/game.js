@@ -8,9 +8,11 @@ const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=ha
 
 
 // DIFFICULTY BUTTONS
+const difficultyButtons = document.getElementsByClassName("difficulty");
 const easy = document.getElementById("easy");
 const medium = document.getElementById("medium");
 const hard = document.getElementById("hard");
+let apiAddress;
 
 //GAME PAGE
 // Counter Area - Scores & Question Number
@@ -56,8 +58,8 @@ function arrayShuffle(array) {
 
 
 //CALL API FUNCTION
-async function callApi() {
-  const response = await fetch(easyQuiz);
+async function callApi(e) {
+  const response = await fetch(apiAddress);
   data = await response.json();
   console.log(data);
 
@@ -230,5 +232,21 @@ console.log(highScores);
 
 // CHOOSE DIFFICULTY - EVENT LISTENERS
 // change so the button selected calls the api and adds the correct url into fetch - use the buttons id to select right one?
-easy.addEventListener("click", callApi);
+//easy.addEventListener("click", callApi);
 
+for (let button of difficultyButtons) {
+  if (button.id === "easy") {
+    apiAddress = easyQuiz;
+  } else if (button.id === "medium") {
+    apiAddress = mediumQuiz;
+  } else if (button.id === "hard") {
+    apiAddress = hardQuiz;
+  } else console.log("error with difficulty button")
+
+  // adds event listener to each button & on click runs check answer function
+  //button.addEventListener("click", callApi(e));
+  button.addEventListener('click', function() {
+    console.log(button, apiAddress);
+  });
+
+};
