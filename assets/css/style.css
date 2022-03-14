@@ -242,7 +242,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding-bottom: 1rem;
 }
 
@@ -255,8 +255,8 @@ li {
   font-size: 1.25rem;
 }
 .btn {
-    font-size: 1.25rem;
-    margin: 0.75rem;
+    font-size: 1rem;
+    margin: 0.5rem;
 }
 
 #modal-content {
