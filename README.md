@@ -91,10 +91,10 @@ During lockdowns pub quizzes remained popular - they just changed format to beco
 
 As the pages of the site have a background image, I wanted to keep the colour scheme used on the site quite small so as to not overwhelm users. Red and green  are very typical colours in traditional British public houses, with the red & green used for upholstery.
 
-* I have used #f5f5f5 & #000000 as the primary and secondary colours used for the sites text.
-* I have used #292929 as the overlay used over the sites background image.
-* I have used # a50c3c for the border of the modal and to display the wrong answers.
-* I have used #047638 to display the correct answer.
+* I have used `#f5f5f5` & `#000000` as the primary and secondary colours used for the sites text.
+* I have used `#292929` as the overlay used over the sites background image.
+* I have used `# a50c3c` for the border of the modal and to display the wrong answers.
+* I have used `#047638` to display the correct answer.
 
   ![The Quiz Arms Color Scheme](documentation/color-scheme.webp)
 
