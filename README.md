@@ -165,13 +165,16 @@ The high scores page displays the sites name as a title. This also acts as a lin
 
 The 404 error page displays the sites name as a title. This also acts as a link back to the home page. Within the page container there is a sorry message explaining to the user that there has been an error directing them to the page they were looking for. The user is then given a choice of three buttons to redirect them to other pages on the site, the home page, the games page and the high scores page.
 
-1[Error page image](LINK GOES HERE)
+![Error page image](LINK GOES HERE)
 
 #### Future Implementations
 
-In future implementations I would like to give users the option to select the amount of questions in their quiz.
+In future implementations I would like to:
 
-I would also like to look into making the quiz a multiplayer game, so that it could be played by teams, which would make the quiz even more like a pub quiz.
+1. Give users the option to select the amount of questions in their quiz.
+2. Look into making the quiz a multiplayer game, so that it could be played by teams, which would make the quiz even more like a pub quiz.
+3. Create a back end database to enable me to store scores which would then allow you to see how you scored against other players.
+4. Look further into the accessibility for people with colour blindness, perhaps by adding symbols such as a tick or cross next to the answer when they are checked.
 
 ### Accessibility
 
