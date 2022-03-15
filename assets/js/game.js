@@ -197,4 +197,3 @@ submitScoreBtn.addEventListener("click", saveHighScore);
 easy.addEventListener('click', callApi);
 medium.addEventListener('click', callApi);
 hard.addEventListener('click', callApi);
-
