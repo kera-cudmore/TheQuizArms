@@ -228,11 +228,11 @@ HTML, CSS, Javascript
 
 * [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
 
-* [Font Awesome](https://fontawesome.com/) - For the iconography on the website.
-
 * [jQuery](https://jquery.com/) - A JavaScript library.
 
 * [Google Developer Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
+
+* [TinyPNG](https://tinypng.com/) To compress images
 
 * [Birme](https://www.birme.net/) To resize images and convert to webp format.
 
@@ -245,6 +245,8 @@ HTML, CSS, Javascript
 * [Open Trivia DataBase](https://opentdb.com/) - API used for the trivia questions.
 
 * [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa) - a google chrome extension to enable you to view JSON as raw data or parsed.
+
+* [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - a google chrome extension that allows you to view your site as people with accessibility needs would see it.
 
 - - -
 
@@ -319,13 +321,28 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 ### Known Bugs
 
+I am not aware of any bugs left in the code. If you do find one, please do contact me 😊
+
 ### Testing User Stories
 
-* First Time Visitors
+| First Time Visitor Goals | How are they achieved? |
+| :--- | :--- |
+| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convient to the user. |
+| I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
+| I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
 
-* Returning Visitors
+---
 
-* Frequent Visitors
+| Returning Visitor Goals | How are they achieved? |
+| :--- | :--- |
+| I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
+
+---
+
+| Frequent Visitor Goals | How are they achieved? |
+| :--- | :--- |
+| I want to be able to adjust the difficulty level to keep improving my knowledge. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
+| I want to be able to log my high scores to see how I am performing. | Users of the site are able to log their high scores to the high scores page. The top ten results will be displayed. |
 
 ### Lighthouse
 
