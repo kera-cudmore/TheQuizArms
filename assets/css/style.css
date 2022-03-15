@@ -166,6 +166,13 @@ li {
     border: var(--red) 1rem solid;
 }
 
+.correctbtn {
+  background-color: var(--green);
+}
+
+.incorrectbtn {
+  background-color: var(--red);
+}
 
 /*---------- HIGH SCORES FORM----------*/
 
