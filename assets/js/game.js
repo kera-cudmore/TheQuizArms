@@ -96,20 +96,35 @@ function nextQuestion(e) {
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
   console.log(e);
- 
   // Disables the answer buttons to prevent them being clicked after user answers
   $('.answer-text').prop('disabled', true);
-
   // check if item clicked has the dataset of correct
   if (e.target.dataset.correct) {
     console.log("Right answer");
     // add the correct answer css
     document.getElementById("outer-container").classList.add("correct");
+    console.log("adding outer border");
+
+
+    // add the correctbtn class to the button clicked
+    let answerSelected = e.target.getAttribute("id");
+    console.log("correct answer is button" + answerSelected);
+    document.getElementById(answerSelected).classList.add("correctbtn");
+    console.log("adding correct btn colour");
+
+
     //add to the score counter
     increaseScore();
 
   } else {
     console.log("wrong answer");
+
+    let answerSelected = e.target.getAttribute("id");
+    console.log("incorrect answer is button" + answerSelected);
+    document.getElementById(answerSelected).classList.add("incorrectbtn");
+    console.log("adding incorrect btn colour");
+
+
     //add class incorrect (class to be made)
     document.getElementById("outer-container").classList.add("incorrect");
   }
