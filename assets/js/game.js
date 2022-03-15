@@ -33,7 +33,6 @@ let answerSelected;
 // End Game Area
 const finalScore = document.getElementById("final-score");
 const teamName = document.getElementById("teamname");
-const mostRecentScore = localStorage.getItem("mostRecentScore");
 const submitScoreBtn = document.getElementById("submitscorebtn");
 const MAX_HIGH_SCORES = 10;
 
@@ -147,8 +146,6 @@ function getQuestion(data) {
     document.getElementById("end-area").classList.remove("hide");
     // insert the final score
     finalScore.innerText = `${score}`;
-    //adds the final score to local storage
-    localStorage.setItem("mostRecentScore", score);
   }
 }
 
