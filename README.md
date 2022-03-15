@@ -20,7 +20,7 @@ During lockdowns pub quizzes remained popular - they just changed format to beco
 
 ## CONTENTS
 
-* [User Experience (UX)](#User-Experience-(UX))
+* [User Experience](#User-Experience)
   * [User Stories](#User-Stories)
 
 * [Design](#Design)
