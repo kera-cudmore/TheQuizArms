@@ -10,7 +10,7 @@ Pub Quizzes are played all around the world, but they are especially popular in 
 
 During lockdowns pub quizzes remained popular - they just changed format to become virtual. This gave me the idea of creating a quiz site that would feel like a pub quiz, where users could play on their own to improve their general knowledge anywhere and at any time.
 
-Add site responsive screenshot here
+![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.webp)
 
 View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
 
