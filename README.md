@@ -95,7 +95,7 @@ In my css file I have used variables to declare colours, and then used these thr
 
 * I have used `#f5f5f5` & `#000000` as the primary and secondary colours used for the sites text.
 * I have used `#292929` as the overlay used over the sites background image.
-* I have used `# a50c3c` for the border of the modal and to display the wrong answers.
+* I have used `#a50c3c` for the border of the modal and to display the wrong answers.
 * I have used `#047638` to display the correct answer.
 
   ![The Quiz Arms Color Scheme](documentation/color-scheme.webp)
@@ -142,22 +142,32 @@ All Pages on the website are responsive and have:
 
 The home page of The Quiz Arms displays the sites name as a title and then a container which holds some welcome text. Below this are three buttons, how to play, play and high scores.
 
-![Home page image](LINK TO GO HERE)
+![Home page image](documentation/features/homepage.jpg)
 
-1. How to play - This button opens a modal showing the user how to play the game. The modal contains a close button which will close the modal, and show the home page again.
-  ![Modal open image](LINK TO GO HERE)
-2. Play - This button will redirect the user to the game page to select the difficulty of their quiz.
-3. High Scores - This button redirects the user to the high scores page.
+The how to play  button opens a modal showing the user how to play the game. The modal contains a close button which will close the modal, and show the home page again.
+
+![Modal open image](documentation/features/modal.jpg)
+
+The play button will redirect the user to the game page to select the difficulty of their quiz and the high Scores button redirects the user to the high scores page.
 
 #### The Game Page
 
 The game page displays the sites name as a title. This also acts as a link back to the home page. Initially on the game page you will be shown a container with three buttons to select the difficulty of the quiz the user can choose from.
 
-![Image of the game page difficulty selection buttons](LINK TO GO HERE)
+![Image of the game page difficulty selection buttons](documentation/features/game-difficulty.jpg)
 
 Once the user has selected their difficulty they will then be shown the quiz area. The quiz area contains the question and the 4  answer choices.
 
-![Image of quiz area](LINK TO GO HERE)
+![Image of quiz area](documentation/features/game-quiz-area.jpg)
+
+when a user selects an answer, they will then be prevented from selecting any more answers. The quiz area border and the button selected will change styles depending on whether the answer selected was correct or incorrect. If the answer selected was correct, the score counter will add 10 to the score total.
+
+![Correct answer](documentation/features/game-correct.jpg)
+![Incorrect answer](documentation/features/game-incorrect.jpg)
+
+Once a user has answered the 15 questions they will be taken to the end of the game which will allow them to enter their team name and submit it to be entered onto the high scores page if it is in the top 10 scores. The submit button is disabled by default to prevent the user from submitting without a team name. This is made clear to the user as the cursor will show not allowed when hovered over the submit button.
+
+![End of game](documentation/features/end-game.jpg)
 
 #### The High Scores Page
 
