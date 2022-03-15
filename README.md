@@ -374,9 +374,15 @@ Each page is achieving a score of 100 for the last three categories. The perform
 
 ### Full Testing
 
-To fully test my website I performed the following testing using a number of browsers (google chrome) and devices (Macbook Pro 14 inch, iPhone X, iPhone 11 pro, iPhone 13 pro).
+During development I made use of google developer tools and the console - to be able to console.log as I wrote the code to ensure everything was working correctly - and to help troubleshoot when things were not working as expected.
 
-I also went through each page using google chrome developer tools to ensure that they were responsive on all different screen sizes.
+To fully test my website I performed the following testing using a number of browsers (google chrome, Firefox & Safari) and devices (Macbook Pro 14 inch, iPhone X, iPhone 11 pro, iPhone 13 pro). Friends and family have also tested the site on their own devices.
+
+I have gone through each page using google chrome developer tools & Firefox inspector tool to ensure that each page is responsive on a variety of different screen sizes.
+
+I have checked that all buttons on the site work as they should, and that if a button is disabled it displays the not allowed cursor. Buttons are disabled once an answer has selected and the submit button is disabled until you enter a team name.
+
+I have checked each button on the site to ensure the hover function on each button is displaying correctly.
 
 - - -
 
