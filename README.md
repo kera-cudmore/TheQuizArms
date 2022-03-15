@@ -160,7 +160,7 @@ Once the user has selected their difficulty they will then be shown the quiz are
 
 ![Image of quiz area](documentation/features/game-quiz-area.jpg)
 
-when a user selects an answer, they will then be prevented from selecting any more answers. The quiz area border and the button selected will change styles depending on whether the answer selected was correct or incorrect. If the answer selected was correct, the score counter will add 10 to the score total.
+when a user selects an answer, they will then be prevented from selecting any more answers. The quiz area border and the button selected will change styles depending on whether the answer selected was correct or incorrect. If the answer selected was correct, the score counter will add 10 to the score total. When the user clicks the next button the question no counter will increase by 1.
 
 ![Correct answer](documentation/features/game-correct.jpg)
 ![Incorrect answer](documentation/features/game-incorrect.jpg)
