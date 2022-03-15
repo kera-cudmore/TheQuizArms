@@ -6,7 +6,6 @@ const easyQuiz = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=mul
 const mediumQuiz = "https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple";
 const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 
-
 // DIFFICULTY BUTTONS
 const easy = document.getElementById("easy");
 const medium = document.getElementById("medium");
@@ -60,8 +59,6 @@ function arrayShuffle(array) {
 async function callApi() {
   const response = await fetch(apiAddress);
   data = await response.json();
-  console.log(data);
-
   // hides the difficulty box and runs start game function with data called
   hideDifficulty();
   getQuestion(data);
@@ -72,28 +69,20 @@ async function callApi() {
 function increaseScore() {
   score += 10;
   scoreCounter.innerText = `${score}`;
-
-  /*score = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = score + 10;
-*/
 }
 
 
 // NEXT QUESTION FUNCTION - run when next button pressed
 function nextQuestion(e) {
-  console.log("next question");
   questionCounter++;
   questionNumber.innerText = `${questionCounter}`;
   document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
-
   getQuestion(data);
-
 }
 
 
 // CHECK ANSWER FUNCTION - e is the event (an answer button being clicked)
 function checkAnswer(e) {
-  console.log(e);
   // Disables the answer buttons to prevent them being clicked after user answers
   $('.answer-text').prop('disabled', true);
   // get the id of the clicked button and add to this variable
@@ -101,7 +90,6 @@ function checkAnswer(e) {
 
   // check if item clicked has the dataset of correct
   if (e.target.dataset.correct) {
-    console.log("Right answer");
     // add the correct answer css styling
     document.getElementById("outer-container").classList.add("correct");
     // add the correctbtn styling
@@ -110,7 +98,6 @@ function checkAnswer(e) {
     increaseScore();
 
   } else {
-    console.log("wrong answer");
     // add the incorrectbtn styling
     document.getElementById(answerSelected).classList.add("incorrectbtn");
     //add incorrect styling
@@ -121,60 +108,45 @@ function checkAnswer(e) {
   next.addEventListener("click", nextQuestion);
   // Remove the attribute on correct question ready for the next question
   e.target.removeAttribute("data-correct", "true");
-
 }
 
 
 // GET QUESTION FUNCTION
 function getQuestion(data) {
-  
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
-
   //Allows the answer buttons to be clicked
   $('.answer-text').prop('disabled', false);
-
   let results = data.results[questionNo];
-  //if(!results || results.length < questionNo) return;
 
   if (questionNo <= 14) {
-
     // adds the question to the site
     question.innerHTML = results.question;
-
     const correctAnswer = results.correct_answer;
-
     // Create an array that holds all the answer choices for the question
     const answers = [...results.incorrect_answers, correctAnswer];
-
     // answers array shuffled & added to answer buttons
     arrayShuffle(answers);
     answer1.innerHTML = `${answers[0]}`;
     answer2.innerHTML = `${answers[1]}`;
     answer3.innerHTML = `${answers[2]}`;
     answer4.innerHTML = `${answers[3]}`;
-    console.log(correctAnswer);
 
     // loops through to check for correct answer & adds data attribute to the correct answer 
     for (let button of answerButtons) {
       if (button.innerText === correctAnswer) {
         button.setAttribute("data-correct", "true");
-        console.log(button);
       }
       // adds event listener to each button & on click runs check answer function
       button.addEventListener("click", checkAnswer);
     }
     questionNo++;
   } else {
-    console.log("No more questions");
-
     // display final screen
     document.getElementById("quiz-area").classList.add("hide");
     document.getElementById("end-area").classList.remove("hide");
-
     // insert the final score
     finalScore.innerText = `${score}`;
-
     //adds the final score to local storage
     localStorage.setItem("mostRecentScore", score);
   }
@@ -184,10 +156,8 @@ function getQuestion(data) {
 // SAVE HIGH SCORE FUNCTION
 //tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 function saveHighScore(e) {
-  console.log("save high score");
   // prevents the form opening new page which it does by default
   e.preventDefault();
-
   // creating scoreLog object that will hold the team name and the score
   const scoreLog = {
     name: teamName.value,
@@ -196,19 +166,15 @@ function saveHighScore(e) {
 
   // pushes the scoreLog object into the highScores array
   highScores.push(scoreLog);
-
   //sorts the array by score
   highScores.sort((a, b) => b.score - a.score);
-
   // cuts off the array at the max high scores number
   highScores.splice(MAX_HIGH_SCORES);
-
   // saves the highscore array to local storage 
   localStorage.setItem("highScores", JSON.stringify(highScores));
 
   // opens the highscores.html page
   window.location.assign("highscores.html");
-  console.log(highScores);
 }
 
 
@@ -216,12 +182,9 @@ function saveHighScore(e) {
 //tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 //get the high scores array from local storage - OR - get empty array if there isn't one
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
 
 // adds event listener to the teamname input field on keyup
 teamName.addEventListener("keyup", () => {
-  //shows the value typed into the input field
-  console.log(teamName.value);
   //if there is nothing in the input field it disabled the submit score button
   submitScoreBtn.disabled = !teamName.value;
 });
@@ -230,8 +193,8 @@ teamName.addEventListener("keyup", () => {
 submitScoreBtn.addEventListener("click", saveHighScore);
 
 
-  // adds event listener to each button & on click runs check answer function
-  easy.addEventListener('click', callApi);
-  medium.addEventListener('click', callApi);
-  hard.addEventListener('click', callApi);
+// adds event listener to each button & on click runs check answer function
+easy.addEventListener('click', callApi);
+medium.addEventListener('click', callApi);
+hard.addEventListener('click', callApi);
 
