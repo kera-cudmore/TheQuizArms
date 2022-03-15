@@ -45,7 +45,8 @@ function hideDifficulty() {
 
 
 // SHUFFLE THE ANSWERS ARRAY FUNCTION - using Fisher Yates Shuffle
-// reseached on W3Schools and adapted as shown on youtube tutorial - https://www.youtube.com/watch?v=eATLMjs7y4s&list=PL5egNEXQTWmFHAoWFVRLNAvD-9zzyWVxA&index=3
+// reseached on W3Schools and adapted as shown on youtube tutorial - 
+// https://www.youtube.com/watch?v=eATLMjs7y4s&list=PL5egNEXQTWmFHAoWFVRLNAvD-9zzyWVxA&index=3
 function arrayShuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     let s = Math.floor(Math.random() * (i + 1));
