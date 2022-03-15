@@ -1,6 +1,8 @@
 # The Quiz Arms
 
-![The Quiz Arms Banner](documentation/the-quiz-arms-banner.png)
+![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.webp)
+
+Visit the deployed site: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
 
 Test your general knowledge and get pub quiz ready!
 
@@ -9,10 +11,6 @@ Pub Quizzes are played all around the world, but they are especially popular in 
 [YouGov](https://yougov.co.uk/topics/lifestyle/explore/activity/Pub_quizzes) show that 98% of people surveyed have heard of a pub quiz, and are rated as the 19th most popular social activity.
 
 During lockdowns pub quizzes remained popular - they just changed format to become virtual. This gave me the idea of creating a quiz site that would feel like a pub quiz, where users could play on their own to improve their general knowledge anywhere and at any time.
-
-![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.webp)
-
-View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/kera-cudmore/TheQuizArms?color=red&style=for-the-badge)
 ![GitHub contributors](https://img.shields.io/github/contributors/kera-cudmore/TheQuizArms?color=orange&style=for-the-badge)
@@ -64,6 +62,7 @@ View the deployed site here: [The Quiz Arms](https://kera-cudmore.github.io/TheQ
   * [Acknowledgments](#Acknowledgments)
 
 - - -
+![The Quiz Arms Banner](documentation/the-quiz-arms-banner.png)
 
 ## User Experience (UX)
 
