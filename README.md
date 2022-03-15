@@ -195,9 +195,18 @@ In future implementations I would like to:
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. This has been have achieved by:
 
 * Using semantic HTML.
-* Using descriptive alt attributes on images on the site.
-* Providing information for screen readers where there are icons used and no text.
+* Using a hover state on all buttons on the site to make it clear to the user if they are hovering over a button.
+* Choosing a sans serif font for the site - these fonts are suitable for people with dyslexia.
 * Ensuring that there is a sufficient colour contrast throughout the site.
+
+![contrast button](documentation/contrast-btn.png) ![Contrast button hover](documentation/contrast-btn-hover.png) ![contrast text](documentation/contrast-text.png)
+
+As the site relies on colour to display to the user whether an answer is correct or incorrect, I was interested to see what this would look like for someone with red/green colour blindness. I used the chrome extension [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) to be able to see what someone with red/green colour blindness would see.
+
+In a future implementation I think it would be a great accessibility feature to also add a symbol such as a tick or cross on the answer button to enable people who are colour blind to also be able to access the quiz easier. Each of the images below have whether they are correct/incorrect in the name. Can you tell which one is which?
+
+![Colour blindness (red/green) correct answer](documentation/rg-colour-blind-correct.png)
+![Colour blindness (red/green) incorrect answer](documentation/rg-colour-blind-incorrect.png)
 
 - - -
 
