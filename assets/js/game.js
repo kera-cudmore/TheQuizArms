@@ -176,25 +176,8 @@ function getQuestion(data) {
 }
 
 
-//HIGH SCORES STORAGE AND RETRIVAL SECTION
-//tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
-//get the high scores array from local storage - OR - get empty array if there isn't one
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-console.log(highScores);
-
-// adds event listener to the teamname input field on keyup
-teamName.addEventListener("keyup", () => {
-  //shows the value typed into the input field
-  console.log(teamName.value);
-  //if there is nothing in the input field it disabled the submit score button
-  submitScoreBtn.disabled = !teamName.value;
-});
-
-// event listener on the Submit high score button on end game page - on click runs the saveHighScore function
-submitScoreBtn.addEventListener("click", saveHighScore);
-
-
 // SAVE HIGH SCORE FUNCTION
+//tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
 function saveHighScore(e) {
   console.log("save high score");
   // prevents the form opening new page which it does by default
@@ -203,7 +186,7 @@ function saveHighScore(e) {
   // creating scoreLog object that will hold the team name and the score
   const scoreLog = {
     name: teamName.value,
-    score: mostRecentScore
+    score: score
   };
 
   // pushes the scoreLog object into the highScores array
@@ -223,6 +206,23 @@ function saveHighScore(e) {
   console.log(highScores);
 }
 
+
+//HIGH SCORES STORAGE AND RETRIVAL SECTION
+//tutorial used to implement https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLDlWc9AfQBfZIkdVaOQXi1tizJeNJipEx&index=9
+//get the high scores array from local storage - OR - get empty array if there isn't one
+const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+console.log(highScores);
+
+// adds event listener to the teamname input field on keyup
+teamName.addEventListener("keyup", () => {
+  //shows the value typed into the input field
+  console.log(teamName.value);
+  //if there is nothing in the input field it disabled the submit score button
+  submitScoreBtn.disabled = !teamName.value;
+});
+
+// event listener on the Submit high score button on end game page - on click runs the saveHighScore function
+submitScoreBtn.addEventListener("click", saveHighScore);
 
 
   // adds event listener to each button & on click runs check answer function
