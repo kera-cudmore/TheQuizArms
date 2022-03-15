@@ -141,7 +141,8 @@ function checkAnswer(e) {
 function getQuestion(data) {
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
-  
+  document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
+
   //Allows the answer buttons to be clicked
   $('.answer-text').prop('disabled', false);
 
