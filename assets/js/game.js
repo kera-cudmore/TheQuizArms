@@ -29,6 +29,7 @@ const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 const next = document.getElementById("next");
+let answerSelected;
 
 // End Game Area
 const finalScore = document.getElementById("final-score");
@@ -83,11 +84,8 @@ function nextQuestion(e) {
   console.log("next question");
   questionCounter++;
   questionNumber.innerText = `${questionCounter}`;
+  document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
 
-  /*
-  let oldAnswerNo = parseInt(document.getElementById("answer-no").innerText);
-  document.getElementById("answer-no").innerText = oldAnswerNo + 1;
-  */
   getQuestion(data);
 
 }
@@ -98,34 +96,24 @@ function checkAnswer(e) {
   console.log(e);
   // Disables the answer buttons to prevent them being clicked after user answers
   $('.answer-text').prop('disabled', true);
+  // get the id of the clicked button and add to this variable
+  answerSelected = e.target.getAttribute("id");
+
   // check if item clicked has the dataset of correct
   if (e.target.dataset.correct) {
     console.log("Right answer");
-    // add the correct answer css
+    // add the correct answer css styling
     document.getElementById("outer-container").classList.add("correct");
-    console.log("adding outer border");
-
-
-    // add the correctbtn class to the button clicked
-    let answerSelected = e.target.getAttribute("id");
-    console.log("correct answer is button" + answerSelected);
+    // add the correctbtn styling
     document.getElementById(answerSelected).classList.add("correctbtn");
-    console.log("adding correct btn colour");
-
-
     //add to the score counter
     increaseScore();
 
   } else {
     console.log("wrong answer");
-
-    let answerSelected = e.target.getAttribute("id");
-    console.log("incorrect answer is button" + answerSelected);
+    // add the incorrectbtn styling
     document.getElementById(answerSelected).classList.add("incorrectbtn");
-    console.log("adding incorrect btn colour");
-
-
-    //add class incorrect (class to be made)
+    //add incorrect styling
     document.getElementById("outer-container").classList.add("incorrect");
   }
   //removes hide class from the next button to display
@@ -133,15 +121,15 @@ function checkAnswer(e) {
   next.addEventListener("click", nextQuestion);
   // Remove the attribute on correct question ready for the next question
   e.target.removeAttribute("data-correct", "true");
-}
 
+}
 
 
 // GET QUESTION FUNCTION
 function getQuestion(data) {
+  
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
-  document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
 
   //Allows the answer buttons to be clicked
   $('.answer-text').prop('disabled', false);
@@ -150,6 +138,7 @@ function getQuestion(data) {
   //if(!results || results.length < questionNo) return;
 
   if (questionNo <= 14) {
+
     // adds the question to the site
     question.innerHTML = results.question;
 
