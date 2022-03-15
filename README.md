@@ -1,6 +1,6 @@
 # The Quiz Arms
 
-![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.webp)
+![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.png)
 
 Visit the deployed site: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
 
