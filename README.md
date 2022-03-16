@@ -300,7 +300,7 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 * [highscores.html](testing/w3/w3-highscores.webp) - Passed.
 * [404.html](testing/w3/w3-404.webp) - Passed.
 
-* [style.css](LINK TO IMG HERE) - Passed, no errors found.
+* [style.css](testing/w3/w3-css.png) - Passed, no errors found.
 
 ### JavaScript Validator
 
