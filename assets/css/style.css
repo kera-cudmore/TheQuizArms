@@ -4,69 +4,70 @@
 
 
 :root {
-    /*---------- TYPOGRAPHY ----------*/
-    --header-text: 'Almendra', serif;
-    --content-text: 'Quicksand', sans-serif;
-  
-    /*---------- COLOURS ----------*/
-    --off-white: #f5f5f5;
-    --red: #a50c3c;
-    --green: #047638;
-    --grey: #292929;
-    --black: #000000;
-  }
+  /*---------- TYPOGRAPHY ----------*/
+  --header-text: 'Almendra', serif;
+  --content-text: 'Quicksand', sans-serif;
+
+  /*---------- COLOURS ----------*/
+  --off-white: #f5f5f5;
+  --red: #a50c3c;
+  --green: #047638;
+  --grey: #292929;
+  --black: #000000;
+}
 
 
 /* Removes all margins & Padding on everything so they can be fully customised */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Background image added to the body with a backup colour in case the image cannot load,
 Font to be used throughout the pages body */
 body {
-background-image: url("../images/bar1.webp");
-background-color: var(--black);
-background-size: cover;
-font-family: var(--content-text);
+  background-image: url("../images/bar1.webp");
+  background-color: var(--black);
+  background-size: cover;
+  font-family: var(--content-text);
 }
 
 
 /*---------- HEADINGS & TEXT ----------*/
 /* Page Title */
- h1 {
-    font-family: var(--header-text);
-    font-size: 3.5rem;
-    font-weight: 700;
-    padding-top: 0.5rem;
-    font-style: italic;
-    color: var(--off-white);
-    text-align: center;
-    text-shadow: 10px 10px 10px var(--red); 
+h1 {
+  font-family: var(--header-text);
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 0.5rem;
+  font-style: italic;
+  color: var(--off-white);
+  text-align: center;
+  text-shadow: 10px 10px 10px var(--red);
 }
 
 h2 {
-    font-size: 1.25rem;
-    text-align: center;
-    font-weight: 500;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 p {
-    text-align: center;
-    font-size: 1rem;
-    padding-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-p.answer-count, p.score-area {
-    padding-bottom: 1rem;
+p.answer-count,
+p.score-area {
+  padding-bottom: 1rem;
 }
 
 #highscoreslist {
@@ -75,39 +76,39 @@ p.answer-count, p.score-area {
 
 li {
   text-align: center;
-  font-size: 1rem;
-  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 
 /*---------- CONTAINERS ----------*/
 /* Flex container*/
 .flex-container {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
 
 }
 
 /* Outer Container */
 #outer-container {
-    background-color: var(--grey);
-    opacity: 0.9;
-    width: 80%;
-    margin: auto;
-    padding: 1.5rem;
-    color: var(--off-white);
-    border-radius: 1.5rem;
+  background-color: var(--grey);
+  opacity: 0.9;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  color: var(--off-white);
+  border-radius: 1.5rem;
 }
 
 /* Button Groups */
 .btn-group {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 /* Counter Area - holds Question No & Score on Game Page */
@@ -120,24 +121,24 @@ li {
 /*---------- BUTTON STYLING ----------*/
 /* emojicursor.app used to add emoji cursor*/
 .btn {
-    font-family: var(--content-text);
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    padding: 0.75rem;
-    background-color: var(--black);
-    border-radius: 2rem;
-    color: var(--off-white);
-    margin: 0.3rem;
-    box-shadow: -2px -2px 5px var(--off-white) inset;
-    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍺</text></svg>") 16 0,auto;
+  font-family: var(--content-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.75rem;
+  background-color: var(--black);
+  border-radius: 2rem;
+  color: var(--off-white);
+  margin: 0.3rem;
+  box-shadow: -2px -2px 5px var(--off-white) inset;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='32' height='38' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🍺</text></svg>") 16 0, auto;
 
 }
 
 .btn:hover {
-    background-color: var(--off-white);
-    color: var(--black);
-    box-shadow: -2px -2px 5px var(--black) inset;
+  background-color: var(--off-white);
+  color: var(--black);
+  box-shadow: -2px -2px 5px var(--black) inset;
 }
 
 .btn[disabled]:hover {
@@ -146,30 +147,30 @@ li {
 
 /* Next Button - Styled so it can be differentiated from the answer buttons */
 .next-btn {
-    background-color: var(--off-white);
-    color: var(--black);
+  background-color: var(--off-white);
+  color: var(--black);
 }
 
 .next-btn:hover {
-    background-color: var(--black);
-    color: var(--off-white);
+  background-color: var(--black);
+  color: var(--off-white);
 }
 
 
 /*---------- CLASSES TO ADD AND REMOVE ----------*/
 /* Hide from display */
 .hide {
-    display: none;
+  display: none;
 }
 
 /* Styling for correct choice */
 .correct {
-    border: var(--green) 1rem solid ;
+  border: var(--green) 0.75rem solid;
 }
 
 /* Styling for incorrect choice */
 .incorrect {
-    border: var(--red) 1rem solid;
+  border: var(--red) 0.75rem solid;
 }
 
 .correctbtn {
@@ -203,54 +204,55 @@ input {
 /* created using tutorial - https://www.youtube.com/watch?v=XH5OW46yO8I
  Making the modal container show on the whole screen, centering the contents */
 #modal-container {
-    position: fixed;
-    top:0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--grey);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
 }
 
 /* Changed the modal opacity to be visable */
 #modal-container.show {
-opacity: 1;
-pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Adding a border with rounded corners and padding around the modal content */
 #modal-content {
-    width: 80%;
-    border: var(--red) 5px solid;
-    border-radius: 1rem;
-    padding: 2rem;
-    color: var(--off-white);
-    text-align: center;
+  width: 80%;
+  border: var(--red) 5px solid;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: var(--off-white);
+  text-align: center;
 }
 
 /* adding margin to top of close modal button */
 #close-modal {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 
 /*---------- MEDIA QUERIES ----------*/
 /* Tablets */
-@media only screen and (min-width : 481px) {    
+@media only screen and (min-width : 481px) {
 
   h1 {
-  font-size: 5rem;
-  padding-top: 1rem;
-}
+    font-size: 5rem;
+    padding-top: 1rem;
+  }
 
   #outer-container {
     padding: 1.5rem;
   }
+
   h2 {
     font-size: 2.5rem;
     padding-bottom: 2rem;
@@ -278,23 +280,31 @@ pointer-events: auto;
     font-size: 1.5rem;
     padding-bottom: 0.5rem;
   }
+
+  .correct {
+    border: var(--green) 1rem solid;
+  }
+
+  /* Styling for incorrect choice */
+  .incorrect {
+    border: var(--red) 1rem solid;
+  }
 }
 
 
 /* Laptops */
-@media only screen and (min-width : 769px) {    
+@media only screen and (min-width : 769px) {
 
   h1 {
-  font-size: 6rem;
-  padding-top: 1.5rem;
-}
+    font-size: 6rem;
+    padding-top: 1.5rem;
+  }
 
   p {
     padding-bottom: 1.75rem;
   }
-  
+
   #modal-content {
     padding: 4rem;
   }
 }
-
