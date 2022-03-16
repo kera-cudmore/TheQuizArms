@@ -7,10 +7,10 @@ const modalContainer = document.getElementById("modal-container");
 
 // Open Modal
 openModal.addEventListener("click", () => {
-    modalContainer.classList.add("show");
+  modalContainer.classList.add("show");
 });
 
 // Close Modal
 closeModal.addEventListener("click", () => {
-    modalContainer.classList.remove("show");
+  modalContainer.classList.remove("show");
 });
