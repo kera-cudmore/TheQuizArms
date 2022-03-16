@@ -33,7 +33,7 @@ During lockdowns pub quizzes remained popular - they just changed format to beco
     * [The Game Page](#The-Game-Page)
     * [The High Scores Page](#The-High-Scores-Page)
     * [The 404 Error Page](#The-404-Error-Page)
-    * [Fututre Implementations](#Future-Implementations)
+    * [Future Implementations](#Future-Implementations)
   * [Accessibility](#Accessibility)
 
 * [Technologies Used](#Technologies-Used)
@@ -248,6 +248,8 @@ HTML, CSS, Javascript
 
 * [Web Disability Simulator](https://chrome.google.com/webstore/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) - a google chrome extension that allows you to view your site as people with accessibility needs would see it.
 
+* [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - a google chrome extension that allows you to spell check your webpage. Used to check the site and the readme for spelling errors.
+
 - - -
 
 ## Deployment & Local Development
@@ -327,7 +329,7 @@ I am not aware of any bugs left in the code. If you do find one, please do conta
 
 | First Time Visitor Goals | How are they achieved? |
 | :--- | :--- |
-| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convient to the user. |
+| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convenient to the user. |
 | I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
 | I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
 
@@ -422,6 +424,6 @@ I would like to acknowledge the following people:
 
 * [Emanuel Silva](https://github.com/manni8436) - For cheering me on when I was struggling with the JavaScript.
 
-*[Abi Harrison](https://github.com/Abibubble) - For being a great rubber duck and helping debug 😉
+* [Abi Harrison](https://github.com/Abibubble) - For being a great rubber duck and helping debug 😉
 
 * The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to test my project and look over the code.
