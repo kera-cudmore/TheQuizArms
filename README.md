@@ -164,7 +164,7 @@ when a user selects an answer, they will then be prevented from selecting any mo
 
 Once a user has answered the 15 questions they will be taken to the end of the game which will allow them to enter their team name and submit it to be entered onto the high scores page if it is in the top 10 scores. The submit button is disabled by default to prevent the user from submitting without a team name. This is made clear to the user as the cursor will show not allowed when hovered over the submit button.
 
-![End of game](documentation/features/end-game.jpg)
+![End of game](documentation/features/end.png)
 
 #### The High Scores Page
 
