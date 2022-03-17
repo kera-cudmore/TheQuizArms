@@ -78,6 +78,9 @@ function nextQuestion(e) {
   questionCounter++;
   questionNumber.innerText = `${questionCounter}`;
   document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
+  displayCorrectAnswer.classList.remove("correctbtn");
+  // Remove the attribute on correct question ready for the next question
+  e.target.removeAttribute("data-correct", "true");
   getQuestion(data);
 }
 
@@ -105,15 +108,12 @@ function checkAnswer(e) {
     document.getElementById("outer-container").classList.add("incorrect");
     // adds the correct answer to the constant & applies the correct button styling
     displayCorrectAnswer = document.querySelector("[data-correct='true']");
-    console.log(displayCorrectAnswer);
     displayCorrectAnswer.classList.add("correctbtn");
 
   }
   //removes hide class from the next button to display
   next.classList.remove("hide");
   next.addEventListener("click", nextQuestion);
-  // Remove the attribute on correct question ready for the next question
-  e.target.removeAttribute("data-correct", "true");
 }
 
 
@@ -125,7 +125,6 @@ function getQuestion(data) {
   //Allows the answer buttons to be clicked
   $('.answer-text').prop('disabled', false);
   let results = data.results[questionNo];
-
   if (questionNo <= 14) {
     // adds the question to the site
     question.innerHTML = results.question;
