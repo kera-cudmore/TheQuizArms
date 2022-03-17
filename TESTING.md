@@ -42,7 +42,7 @@ I have gone through each page using google chrome developer tools & Firefox insp
 
 - - -
 
-### JAVASCRIPT VALIDATOR
+### JavaScript Validator
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
