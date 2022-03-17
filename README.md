@@ -312,9 +312,9 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
-* [javascript.js](testing/jshint/jshint-javascript-js.png) - Passed.
-* [game.js](testing/jshint/jshint-game-js.png) - Passed with one warning. Async functions are only available in ES8. It also stated that there are 4 unused variables, however these are being used.
-* [highscores.js](testing/jshint/jshint-highscores-js.png) - Passed.
+* [javascript.js](testing/jshint/jshint-javascript.png) - Passed.
+* [game.js](testing/jshint/jshint-game.png) - Passed with one warning. Async functions are only available in ES8. It also stated that there are 4 unused variables, however these are being used.
+* [highscores.js](testing/jshint/jshint-highscores.png) - Passed.
 
 ### Solved Bugs
 
