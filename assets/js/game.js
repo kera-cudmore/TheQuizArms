@@ -29,6 +29,7 @@ const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 const next = document.getElementById("next");
 let answerSelected;
+let displayCorrectAnswer;
 
 // End Game Area
 const finalScore = document.getElementById("final-score");
@@ -102,6 +103,11 @@ function checkAnswer(e) {
     document.getElementById(answerSelected).classList.add("incorrectbtn");
     //add incorrect styling
     document.getElementById("outer-container").classList.add("incorrect");
+    // adds the correct answer to the constant & applies the correct button styling
+    displayCorrectAnswer = document.querySelector("[data-correct='true']");
+    console.log(displayCorrectAnswer);
+    displayCorrectAnswer.classList.add("correctbtn");
+
   }
   //removes hide class from the next button to display
   next.classList.remove("hide");
@@ -115,6 +121,7 @@ function checkAnswer(e) {
 function getQuestion(data) {
   next.classList.add("hide");
   document.getElementById("outer-container").classList.remove("correct", "incorrect");
+
   //Allows the answer buttons to be clicked
   $('.answer-text').prop('disabled', false);
   let results = data.results[questionNo];
