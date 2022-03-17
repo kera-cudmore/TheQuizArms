@@ -149,14 +149,11 @@ Each page is achieving a score of 100 for the last three categories. The perform
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
 | All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
 | 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-| --- | --- | --- | --- | --- |
-
-
+| Score Display | The Your Score area should populate with the score you have achieved | I added my score as I played, checked the score on the last question & compared to the score displayed | The score displays correctly | Pass |
+| Submit Button - enabled/disabled | The submit button should be disabled and show the not allowed cursor by default. Once the user types their team name into the input field the button is enabled | I hovered over and clicked the submit button without filling in the team name field. I then added a team name, hovered over and clicked the submit button | Without a team name filled in the cursor displays as not allowed and the button will not submit. Once I filled in a team name the cursor became a 🍺 when hovered over the button and I was able to click and submit the score | Pass |
+| Submit button - on submit | Once clicked the submit button will redirect you to the high scores page | Clicked the button with the team name filled in | Redirected to the high scores page | Pass |
+| Play again? button | Clicking on this button will return you to the start of the game page where you can select a quiz difficulty level | Clicked on the play again? button | Directed to the beggining of the game to select a difficulty level | Pass |
+| Home button | Clicking on this button will take you back to the home page | Clicked the home button | Directed back to the home page | Pass |
 
 `High Scores Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
