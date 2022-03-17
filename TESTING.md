@@ -1,10 +1,20 @@
-# **The Quiz Arms Testing**
+# The Quiz Arms -  Testing
 
-* [W3C Validator](#W3C-Validator)
-* [JavaScript Validator](#JavaScript-Validator)
-* [Testing User Stories](#Testing-User-Stories)
-* [Lighthouse](#Lighthouse)
-* [Full Testing](#Full-Testing)
+![The Quiz Arms shown on a variety of screen sizes](assets/images/the-quiz-arms.png)
+
+Visit the deployed site: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizArms/)
+
+- - -
+
+## CONTENTS
+
+* [AUTOMATED TESTING](#AUTOMATED-TESTING)
+  * [W3C Validator](#W3C-Validator)
+  * [JavaScript Validator](#JavaScript-Validator)
+  * [Lighthouse](#Lighthouse)
+* [MANUAL TESTING](#MANUAL-TESTING)
+  * [Testing User Stories](#Testing-User-Stories)
+  * [Full Testing](#Full-Testing)
 
 Testing was ongoing throughout the entire build. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
 
@@ -18,7 +28,9 @@ To fully test my website I performed the following testing using a number of bro
 
 - - -
 
-## **W3C VALIDATOR**
+## AUTOMATED TESTING
+
+### W3C Validator
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
@@ -32,7 +44,7 @@ To fully test my website I performed the following testing using a number of bro
 
 - - -
 
-## **JAVASCRIPT VALIDATOR**
+### JAVASCRIPT VALIDATOR
 
 [jshint](https://jshint.com/) was used to validate the JavaScript.
 
@@ -42,30 +54,7 @@ To fully test my website I performed the following testing using a number of bro
 
 - - -
 
-## **TESTING USER STORIES**
-
-    - First Time Visitors
-
-| Goals | How are they achieved? |
-| :--- | :--- |
-| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convenient to the user. |
-| I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
-| I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
-
-    - Returning Visitors
-|  Goals | How are they achieved? |
-| :--- | :--- |
-| I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
-
-    - Frequent Visitors
-| Goals | How are they achieved? |
-| :--- | :--- |
-| I want to be able to adjust the difficulty level to keep improving my knowledge. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
-| I want to be able to log my high scores to see how I am performing. | Users of the site are able to log their high scores to the high scores page. The top ten results will be displayed. |
-
-- - -
-
-## **Lighthouse**
+### Lighthouse
 
 I used Lighthouse within the Chrome Developer Tools to test the performance, accessibility, best practices and SEO of the website.
 
@@ -99,7 +88,32 @@ Each page is achieving a score of 100 for the last three categories. The perform
 
 - - -
 
-## **Full Testing**
+## MANUAL TESTING
+
+### Testing User Stories
+
+    - First Time Visitors
+
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to take part in a pub quiz online and improve my general knowledge. I want to be able to play at any time, anywhere. | The Quiz Arms pulls general knowledge quiz questions from a large variety of topics, much like a pub quiz would do. The site is available for use whenever is convenient to the user. |
+| I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
+| I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
+
+    - Returning Visitors
+|  Goals | How are they achieved? |
+| :--- | :--- |
+| I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
+
+    - Frequent Visitors
+| Goals | How are they achieved? |
+| :--- | :--- |
+| I want to be able to adjust the difficulty level to keep improving my knowledge. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
+| I want to be able to log my high scores to see how I am performing. | Users of the site are able to log their high scores to the high scores page. The top ten results will be displayed. |
+
+- - -
+
+### Full Testing
 
 `Home Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
