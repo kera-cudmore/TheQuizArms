@@ -2,7 +2,7 @@ let data = {};
 let questionNo = 0;
 
 // API
-//const easyQuiz = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple";
+const easyQuiz = "https://opentdb.com/api.php?amount=15&difficulty=easy&type=multiple";
 const mediumQuiz = "https://opentdb.com/api.php?amount=15&difficulty=medium&type=multiple";
 const hardQuiz = "https://opentdb.com/api.php?amount=15&category=9&difficulty=hard&type=multiple";
 
