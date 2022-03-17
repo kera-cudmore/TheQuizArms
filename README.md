@@ -374,7 +374,7 @@ All pages of the site are achieving a score of 100 across the 4 categories.
 
 #### Mobile Results
 
-Each page is achieving a score of 100 for the last three categories. The performance category is achieving a score of 98 for the first three pages and a score of 99 on the 404 page.
+Each page is achieving a score of 100 for the last three categories. The performance category is achieving a score of 98 for the first three pages and a score of 99 on the 404 & 500 page.
 
 ![index.html](testing/lighthouse/lighthouse-mobile-index.webp)
 
