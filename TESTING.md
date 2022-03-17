@@ -115,10 +115,12 @@ Each page is achieving a score of 100 for the last three categories. The perform
 
 Full testing was performed on the following devices:
 
-* Laptop
+* Laptop:
   * Macbook Pro 2021 14 inch screen
-* Mobile Devices
+* Mobile Devices:
   * iPhone 13 pro.
+  * iPhone 11 pro.
+  * Phone X.
 
 Each device tested the site using the following browsers:
 
