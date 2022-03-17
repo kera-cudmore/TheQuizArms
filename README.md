@@ -132,11 +132,15 @@ The website is comprised of a home page, a games page, a high scores page, a 404
 All Pages on the website are responsive and have:
 
 * A favicon in the browser tab.
-  
+
   ![favicon](documentation/favicon-image.webp)
 
 * The title of the site at the top of every page. This title also acts as a link back to the home page.
   ![The Quiz Arms Title](documentation/the-quiz-arms-banner.png)
+
+* Every page will display a custom cursor when on a button. This feature is not available on mobile touch devices.
+
+![Custom Cursor](documentation/features/custom-cursor.gif)
 
 #### The Home Page
 
