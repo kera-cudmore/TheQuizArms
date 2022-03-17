@@ -436,6 +436,6 @@ I would like to acknowledge the following people:
 
 * [Emanuel Silva](https://github.com/manni8436) - For cheering me on when I was struggling with the JavaScript.
 
-* [Abi Harrison](https://github.com/Abibubble) - For being a great rubber duck and helping debug 😉
+* [Abi Harrison](https://github.com/Abibubble) - For being a great rubber duck and helping debug, and for sharing her knowledge on accessibility.
 
 * The Code Institute Slack channel Peer Code Review - Thank you to everyone who took the time to test my project and look over the code.
