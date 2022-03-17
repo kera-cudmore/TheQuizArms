@@ -140,13 +140,13 @@ All Pages on the website are responsive and have:
 
 #### The Home Page
 
-The home page of The Quiz Arms displays the sites name as a title and then a container which holds some welcome text. Below this are three buttons, how to play, play and high scores.
+The home page of The Quiz Arms displays the sites name as a title and then a container which holds some welcome text, including alerting the users that they can navigate back to the home page at any time by clicking on the page name. Below this are three buttons, how to play, play and high scores.
 
-![Home page image](documentation/features/homepage.jpg)
+![Home page image](documentation/features/index.png)
 
 The how to play  button opens a modal showing the user how to play the game. The modal contains a close button which will close the modal, and show the home page again.
 
-![Modal open image](documentation/features/modal.jpg)
+![Modal open image](documentation/features/modal.png)
 
 The play button will redirect the user to the game page to select the difficulty of their quiz and the high Scores button redirects the user to the high scores page.
 
