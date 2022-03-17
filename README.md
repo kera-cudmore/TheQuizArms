@@ -366,6 +366,8 @@ All pages of the site are achieving a score of 100 across the 4 categories.
 
 ![404.html](testing/lighthouse/lighthouse-desktop-404.webp)
 
+![500.html](testing/lighthouse/lighthouse-desktop-500.png)
+
 #### Mobile Results
 
 Each page is achieving a score of 100 for the last three categories. The performance category is achieving a score of 98 for the first three pages and a score of 99 on the 404 page.
@@ -377,6 +379,8 @@ Each page is achieving a score of 100 for the last three categories. The perform
 ![highscores.html](testing/lighthouse/lighthouse-mobile-highscores.webp)
 
 ![404.html](testing/lighthouse/lighthouse-mobile-404.webp)
+
+![500.html](testing/lighthouse/lighthouse-mobile-500.png)
 
 ### Full Testing
 
