@@ -173,7 +173,7 @@ Each page is achieving a score of 100 for the last three categories. The perform
 | 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 | Go home button | Takes the user back to the home page | Clicked the button | Taken to the home page | Pass |
 | Play button | Takes the user to the beginning of the game page | Clicked the button | Taken to the beginning of the game page to choose a difficulty level | Pass|
-| High Scores button | Takes the user to the high scores page | Clicked the button | Taken to the high scores page | Pass |
+| View high Scores button | Takes the user to the high scores page | Clicked the button | Taken to the high scores page | Pass |
 
 `500 Error Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
@@ -181,5 +181,5 @@ Each page is achieving a score of 100 for the last three categories. The perform
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
 | All buttons - hover effect | All buttons with a black background & white text should change when hovered over to a background colour of white with black text. | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
 | 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
-
-
+| Go home button | Takes the user back to the home page | Clicked the button | Taken to the home page | Pass |
+| View high Scores button | Takes the user to the high scores page | Clicked the button | Taken to the high scores page | Pass |
