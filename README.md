@@ -154,16 +154,13 @@ The play button will redirect the user to the game page to select the difficulty
 
 The game page displays the sites name as a title. This also acts as a link back to the home page. Initially on the game page you will be shown a container with three buttons to select the difficulty of the quiz the user can choose from.
 
-![Image of the game page difficulty selection buttons](documentation/features/game-difficulty.jpg)
+![Image of the game page difficulty selection buttons](documentation/features/difficulty.png)
 
 Once the user has selected their difficulty they will then be shown the quiz area. The quiz area contains the question and the 4  answer choices.
 
-![Image of quiz area](documentation/features/game-quiz-area.jpg)
-
 when a user selects an answer, they will then be prevented from selecting any more answers. The quiz area border and the button selected will change styles depending on whether the answer selected was correct or incorrect. If the answer selected was correct, the score counter will add 10 to the score total. When the user clicks the next button the question no counter will increase by 1. If the user selects the wrong answer, the button selected will display red, and the correct answer will display as green.
 
-![Correct answer](documentation/features/game-correct.jpg)
-![Incorrect answer](documentation/features/game-incorrect.jpg)
+![Image of quiz area](documentation/features/quiz.png)
 
 Once a user has answered the 15 questions they will be taken to the end of the game which will allow them to enter their team name and submit it to be entered onto the high scores page if it is in the top 10 scores. The submit button is disabled by default to prevent the user from submitting without a team name. This is made clear to the user as the cursor will show not allowed when hovered over the submit button.
 
