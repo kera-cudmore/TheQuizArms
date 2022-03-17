@@ -110,18 +110,28 @@ Each page is achieving a score of 100 for the last three categories. The perform
 | Play Button | Directs the user to the game page | Clicked on button | Game page opens to display the difficulty selections | Pass |
 | High Scores Button | Directs the user to the high scores page | Clicked on button | Directs to the high scores page | Pass |
 | All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
-| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the ↖ cursor to the 🍺 cursor | Pass |
-
-
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 
 `Game Page - Difficulty Selection`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-
-
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
+| Easy Button | Calls the easy quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-easy](testing/data-consolelog-easy.png) | Pass |
+| Medium Button | Calls the medium quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-medium](testing/data-consolelog-medium.png) | Pass |
+| Hard Button | Calls the hard quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-hard](testing/data-consolelog-hard.png) | Pass |
 
 `Game Page - Quiz Area`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | --- | --- | --- | --- | --- |
 
 
@@ -129,23 +139,35 @@ Each page is achieving a score of 100 for the last three categories. The perform
 `Game Page - End of Quiz`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 
 
 
 `High Scores Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 
 
 
 `404 Error Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 
 
 
 `500 Error Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
+| All buttons - hover effect | All black buttons with white text should change colour to white with black text when hovered over | Hover over each button on the page | Each button displayed the correct styling when hovered over | Pass |
+| 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 
 
