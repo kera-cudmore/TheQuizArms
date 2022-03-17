@@ -170,13 +170,13 @@ Once a user has answered the 15 questions they will be taken to the end of the g
 
 The high scores page displays the sites name as a title. This also acts as a link back to the home page. The page then displays the high scores recorded - showing the team name a user chooses and their score. The high scores page will list the top ten scores recorded. Underneath the high scores are two buttons to allow the user to play again or be redirected to the home page.
 
-![High Scores Page Image](documentation/features/highscorespage.jpg)
+![High Scores Page Image](documentation/features/highscores.png)
 
 #### The 404 Error Page
 
 The 404 error page displays the sites name as a title. This also acts as a link back to the home page. Within the page container there is a sorry message explaining to the user that there has been an error directing them to the page they were looking for. The user is then given a choice of three buttons to redirect them to other pages on the site, the home page, the games page and the high scores page.
 
-![Error page image](documentation/features/404page.jpg)
+![Error page image](documentation/features/404.png)
 
 #### Future Implementations
 
