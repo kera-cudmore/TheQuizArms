@@ -59,14 +59,14 @@ function arrayShuffle(array) {
 //CALL API FUNCTION
 async function callApi() {
   const response = await fetch(apiAddress);
-  if (response.status >= 200 && response.status <=299) {
-  data = await response.json();
-  // hides the difficulty box and runs start game function with data called
-  hideDifficulty();
-  getQuestion(data);
-} else 
-  // This is where the error is handled - redirects to 500 page
-  window.location.assign("500.html");
+  if (response.status >= 200 && response.status <= 299) {
+    data = await response.json();
+    // hides the difficulty box and runs start game function with data called
+    hideDifficulty();
+    getQuestion(data);
+  } else
+    // This is where the error is handled - redirects to 500 page
+    window.location.assign("500.html");
 }
 
 
