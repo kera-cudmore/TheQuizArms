@@ -127,7 +127,7 @@ Wireframes were created for mobile, tablet and desktop using balsamiq.
 
 ### Features
 
-The website is comprised of a home page, a games page, a high scores page and a 404 error page.
+The website is comprised of a home page, a games page, a high scores page, a 404 error page & a 500 error page.
 
 All Pages on the website are responsive and have:
 
@@ -177,6 +177,12 @@ The high scores page displays the sites name as a title. This also acts as a lin
 The 404 error page displays the sites name as a title. This also acts as a link back to the home page. Within the page container there is a sorry message explaining to the user that there has been an error directing them to the page they were looking for. The user is then given a choice of three buttons to redirect them to other pages on the site, the home page, the games page and the high scores page.
 
 ![Error page image](documentation/features/404.png)
+
+#### The 500 Error Page
+
+The 500 error page displays the sites names as a title, which also acts as a link back to the home page. Within the container is an error message that tells the user sorry there seems to be an issue retrieving the quiz data. Two buttons for the home page and the high scores page are below. I did not add the play game button here, as a user will been directed to this page if there is an error calling the API.
+
+![500 Error Page](documentation/features/500.png)
 
 #### Future Implementations
 
