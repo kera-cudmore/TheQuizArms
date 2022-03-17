@@ -326,7 +326,7 @@ Testing was ongoing throughout the entire build. I utilised Chrome developer too
 
 ### Known Bugs
 
-I am not aware of any bugs left in the code. If you do find one, please do contact me 😊
+When viewing on screens that use touch rather than a cursor, the colour change for the answer button selected is not immediately obvious as the hover state remains on the button. If the user clicks away from the button the colour can then been seen.
 
 ### Testing User Stories
 
