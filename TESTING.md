@@ -24,8 +24,6 @@ I utilised the console in the developer tools to work through small sections of 
 
 I have gone through each page using google chrome developer tools & Firefox inspector tool to ensure that each page is responsive on a variety of different screen sizes and devices.
 
-To fully test my website I performed the following testing using a number of browsers (google chrome, Firefox & Safari) and devices (Macbook Pro 14 inch, iPhone X, iPhone 11 pro, iPhone 13 pro). Friends and family have also tested the site on their own devices.
-
 - - -
 
 ## AUTOMATED TESTING
@@ -114,6 +112,23 @@ Each page is achieving a score of 100 for the last three categories. The perform
 - - -
 
 ### Full Testing
+
+Full testing was performed on the following devices:
+
+* Laptop
+  * Macbook Pro 2021 14 inch screen
+* Mobile Devices
+  * iPhone 13 pro.
+
+Each device tested the site using the following browsers:
+
+* Google Chrome
+* Safari
+* Firefox
+
+Additional testing was taken by friends and family on a variety of devices and screen sizes. They reported no issues when playing.
+
+One tester in peer code review stated that the bottom of the play screen was cut off when testing on an iphone SE (2nd gen). I was unable to replicate this issue using google chrome developer tools.
 
 `Home Page`
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
