@@ -90,7 +90,7 @@ Each page is achieving a score of 100 for the last three categories. The perform
 
 ### Testing User Stories
 
-    - First Time Visitors
+`First Time Visitors`
 
 | Goals | How are they achieved? |
 | :--- | :--- |
@@ -98,12 +98,14 @@ Each page is achieving a score of 100 for the last three categories. The perform
 | I want the site to be responsive to my device. | I have developed the site with responsiveness in mind. |
 | I want the site to be easy to navigate. | Buttons are used throughout the site for navigation, much like a mobile app. As the site is like a mobile app - I decided that I didn't want to add a navigation bar or footer, as these would make the site look more like a traditional webpage. The page title also acts as a link to the home page.  |
 
-    - Returning Visitors
+`Returning Visitors`
+
 |  Goals | How are they achieved? |
 | :--- | :--- |
 | I want to be able to choose a level of difficulty that I feel is appropriate for me, based on my experience from my first visit to the site. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
 
-    - Frequent Visitors
+`Frequent Visitors`
+
 | Goals | How are they achieved? |
 | :--- | :--- |
 | I want to be able to adjust the difficulty level to keep improving my knowledge. | Users are able to select their own level of difficulty before the game begins. Once they have played they are free to select a different level of difficulty for subsequent games. |
@@ -133,6 +135,7 @@ Additional testing was taken by friends and family on a variety of devices and s
 One tester in peer code review stated that the bottom of the play screen was cut off when testing on an iphone SE (2nd gen). I was unable to replicate this issue using google chrome developer tools.
 
 `Home Page`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
@@ -144,6 +147,7 @@ One tester in peer code review stated that the bottom of the play screen was cut
 | 🍺 Cursor | The 🍺 should display when a user moves the mouse over a button | Moved the mouse over each button to check the cursor changed upon entering the button | The cursor changed from the arrow cursor to the 🍺 cursor | Pass |
 
 `Game Page - Difficulty Selection`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Directed back to home page | Pass |
@@ -154,6 +158,7 @@ One tester in peer code review stated that the bottom of the play screen was cut
 | Hard Button | Calls the hard quiz URL for the API | By console logging the data called from the API I was able to check the difficulty level of the questions corresponded with the level called | ![data-console.log-hard](testing/data-consolelog-hard.png) | Pass |
 
 `Game Page - Quiz Area`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | directed back to home page | Pass |
@@ -175,6 +180,7 @@ One tester in peer code review stated that the bottom of the play screen was cut
 | Next button - clicked | When clicked all answer styles should be removed, the next button should become hidden again and a new question and answer loaded if there are questions left. If all questions have been answered the end game should appear | Clicked on the next button | All styles were removed and a new question and answers were displayed. After question 15 was answered I was taken to the end game. | Pass |
 
 `Game Page - End of Quiz`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
@@ -187,6 +193,7 @@ One tester in peer code review stated that the bottom of the play screen was cut
 | Home button | Clicking on this button will take you back to the home page | Clicked the home button | Directed back to the home page | Pass |
 
 `High Scores Page`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
@@ -197,6 +204,7 @@ One tester in peer code review stated that the bottom of the play screen was cut
 | Home button | Takes the user to the home page | Clicked the button | Taken to the home page | Pass |
 
 `404 Error Page`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
@@ -207,6 +215,7 @@ One tester in peer code review stated that the bottom of the play screen was cut
 | View high Scores button | Takes the user to the high scores page | Clicked the button | Taken to the high scores page | Pass |
 
 `500 Error Page`
+
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | The Sites title | Link directs the user back to the home page | Clicked title | Home page reloads | Pass |
