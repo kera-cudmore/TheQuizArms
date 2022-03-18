@@ -30,7 +30,7 @@ const answer4 = document.getElementById("answer4");
 let correctAnswer;
 const next = document.getElementById("next");
 let answerSelected;
-let displayCorrectAnswer;
+
 
 // End Game Area
 const finalScore = document.getElementById("final-score");
@@ -84,6 +84,7 @@ function nextQuestion(e) {
   questionCounter++;
   questionNumber.innerText = `${questionCounter}`;
   document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
+  let displayCorrectAnswer = document.querySelector("[data-correct='true']");
   displayCorrectAnswer.classList.remove("correctbtn");
   // Remove the attribute on correct question ready for the next question
       // loops through to check for correct answer & adds data attribute to the correct answer 
@@ -92,8 +93,6 @@ function nextQuestion(e) {
           button.removeAttribute("data-correct", "true");
         }
       }
-
-
 
   getQuestion(data);
 }
@@ -121,13 +120,14 @@ function checkAnswer(e) {
     //add incorrect styling
     document.getElementById("outer-container").classList.add("incorrect");
     // adds the correct answer to the constant & applies the correct button styling
-    displayCorrectAnswer = document.querySelector("[data-correct='true']");
+    let displayCorrectAnswer = document.querySelector("[data-correct='true']");
     displayCorrectAnswer.classList.add("correctbtn");
 
   }
   //removes hide class from the next button to display
   next.classList.remove("hide");
   next.addEventListener("click", nextQuestion);
+
 }
 
 
