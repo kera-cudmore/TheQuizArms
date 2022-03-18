@@ -306,8 +306,8 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Known Bugs
 
-When viewing on screens that use touch rather than a cursor, the colour change for the answer button selected is not immediately obvious as the hover state remains on the button. If the user clicks away from the button the colour can then been seen.
-
+1. When viewing on screens that use touch rather than a cursor, the colour change for the answer button selected is not immediately obvious as the hover state remains on the button. If the user clicks away from the button the colour can then been seen.
+2. If a large number of games are played one after another, it seems like the API gets overloaded and is unable to call another question, so the user becomes stuck on the game page without a new question being populated.
 - - -
 
 ## Credits
