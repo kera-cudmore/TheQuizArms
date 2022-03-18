@@ -56,6 +56,14 @@ function arrayShuffle(array) {
   }
 }
 
+// DECODE HTML ENTITY FUNCTION
+//Function to replace escaped characters from the API 
+const decodeHtmlEntity = (str) => {
+  return str.replace(/&#(\d+);/g, function(match, dec) {
+    return String.fromCharCode(dec);
+  });
+};
+
 
 //CALL API FUNCTION
 async function callApi() {
@@ -117,7 +125,7 @@ function checkAnswer(e) {
     document.getElementById(answerSelected).classList.add("incorrectbtn");
     //add incorrect styling
     document.getElementById("outer-container").classList.add("incorrect");
-    // adds the correct answer to the constant & applies the correct button styling
+    // adds the correct answer to the variable & applies the correct button styling
     let displayCorrectAnswer = document.querySelector("[data-correct='true']");
     displayCorrectAnswer.classList.add("correctbtn");
   }
@@ -150,7 +158,7 @@ function getQuestion(data) {
 
     // loops through to check for correct answer & adds data attribute to the correct answer 
     for (let button of answerButtons) {
-      if (button.innerHTML === correctAnswer) {
+      if (button.innerHTML === decodeHtmlEntity(correctAnswer)) {
         button.setAttribute("data-correct", "true");
       }
       // adds event listener to each button & on click runs check answer function
