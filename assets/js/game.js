@@ -27,6 +27,7 @@ const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
+let correctAnswer;
 const next = document.getElementById("next");
 let answerSelected;
 let displayCorrectAnswer;
@@ -64,6 +65,7 @@ async function callApi() {
     // hides the difficulty box and runs start game function with data called
     hideDifficulty();
     getQuestion(data);
+    console.log(data);
   } else
     // This is where the error is handled - redirects to 500 page
     window.location.assign("500.html");
@@ -84,7 +86,15 @@ function nextQuestion(e) {
   document.getElementById(answerSelected).classList.remove("correctbtn", "incorrectbtn");
   displayCorrectAnswer.classList.remove("correctbtn");
   // Remove the attribute on correct question ready for the next question
-  e.target.removeAttribute("data-correct", "true");
+      // loops through to check for correct answer & adds data attribute to the correct answer 
+      for (let button of answerButtons) {
+        if (button.innerHTML === correctAnswer) {
+          button.removeAttribute("data-correct", "true");
+        }
+      }
+
+
+
   getQuestion(data);
 }
 
@@ -132,7 +142,7 @@ function getQuestion(data) {
   if (questionNo <= 14) {
     // adds the question to the site
     question.innerHTML = results.question;
-    const correctAnswer = results.correct_answer;
+    correctAnswer = results.correct_answer;
     // Create an array that holds all the answer choices for the question
     const answers = [...results.incorrect_answers, correctAnswer];
     // answers array shuffled & added to answer buttons
@@ -144,7 +154,7 @@ function getQuestion(data) {
 
     // loops through to check for correct answer & adds data attribute to the correct answer 
     for (let button of answerButtons) {
-      if (button.innerText === correctAnswer) {
+      if (button.innerHTML === correctAnswer) {
         button.setAttribute("data-correct", "true");
       }
       // adds event listener to each button & on click runs check answer function
