@@ -65,7 +65,6 @@ async function callApi() {
     // hides the difficulty box and runs start game function with data called
     hideDifficulty();
     getQuestion(data);
-    console.log(data);
   } else
     // This is where the error is handled - redirects to 500 page
     window.location.assign("500.html");
@@ -87,13 +86,12 @@ function nextQuestion(e) {
   let displayCorrectAnswer = document.querySelector("[data-correct='true']");
   displayCorrectAnswer.classList.remove("correctbtn");
   // Remove the attribute on correct question ready for the next question
-      // loops through to check for correct answer & adds data attribute to the correct answer 
-      for (let button of answerButtons) {
-        if (button.innerHTML === correctAnswer) {
-          button.removeAttribute("data-correct", "true");
-        }
-      }
-
+  // loops through to check for correct answer & adds data attribute to the correct answer 
+  for (let button of answerButtons) {
+    if (button.innerHTML === correctAnswer) {
+      button.removeAttribute("data-correct", "true");
+    }
+  }
   getQuestion(data);
 }
 
@@ -122,12 +120,10 @@ function checkAnswer(e) {
     // adds the correct answer to the constant & applies the correct button styling
     let displayCorrectAnswer = document.querySelector("[data-correct='true']");
     displayCorrectAnswer.classList.add("correctbtn");
-
   }
   //removes hide class from the next button to display
   next.classList.remove("hide");
   next.addEventListener("click", nextQuestion);
-
 }
 
 
@@ -190,7 +186,6 @@ function saveHighScore(e) {
   highScores.splice(MAX_HIGH_SCORES);
   // saves the highscore array to local storage 
   localStorage.setItem("highScores", JSON.stringify(highScores));
-
   // opens the highscores.html page
   window.location.assign("highscores.html");
 }
