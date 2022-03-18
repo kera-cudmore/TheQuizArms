@@ -57,9 +57,9 @@ function arrayShuffle(array) {
 }
 
 // DECODE HTML ENTITY FUNCTION
-//Function to replace escaped characters from the API 
+//Function to replace HTML entity characters from the API answers with the correct character
 const decodeHtmlEntity = (str) => {
-  return str.replace(/&#(\d+);/g, function(match, dec) {
+  return str.replace(/&#(\d+);/g, function (match, dec) {
     return String.fromCharCode(dec);
   });
 };
