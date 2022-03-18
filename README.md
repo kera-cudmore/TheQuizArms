@@ -308,9 +308,16 @@ Please refer to [TESTING.md](TESTING.md) file for all testing carried out.
 
 ### Known Bugs
 
-1. When viewing on screens that use touch rather than a cursor, the colour change for the answer button selected is not immediately obvious as the hover state remains on the button. If the user clicks away from the button the colour can then been seen. ![Touch Button Colour](documentation/touch-button-colour.gif)
-2. There is a a warning displaying in the console on the live page. This error seems to be because GitHub hosted pages disable googles 3rd party cookie alternative FLoC, which then throws this error. The error doesn't affect the site in any way. ![Console warning](documentation/interest-cohort-error.png)
-3. When friends tested the site they found that very rarely a game will get stuck on a question, and it will not populate a new question but the question no counter continues to increase. This issue only seems to be if a large number of games are played consecutively, possibly using up the questions in the API. I have not been able to replicate this issue to troubleshoot further. ![Question overloaded](documentation/questions-depleted.gif)
+1. When viewing on screens that use touch rather than a cursor, the colour change for the answer button selected is not immediately obvious as the hover state remains on the button. If the user clicks away from the button the colour can then been seen.
+
+![Touch Button Colour](documentation/touch-button-colour.gif)
+
+2. There is a a warning displaying in the console on the live page. This error seems to be because GitHub hosted pages disable googles 3rd party cookie alternative FLoC, which then throws this error. The error doesn't affect the site in any way.
+
+![Console warning](documentation/interest-cohort-error.png)
+
+3. When friends tested the site they found that very rarely a game will get stuck on a question, and it will not populate a new question but the question no counter continues to increase. This issue only seems to be if a large number of games are played consecutively, possibly using up the questions in the API. I have not been able to replicate this issue to troubleshoot further.
+![Question overloaded](documentation/questions-depleted.gif)
 
 - - -
 
