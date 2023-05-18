@@ -8,13 +8,13 @@ Visit the deployed site: [The Quiz Arms](https://kera-cudmore.github.io/TheQuizA
 
 ## CONTENTS
 
-* [AUTOMATED TESTING](#AUTOMATED-TESTING)
-  * [W3C Validator](#W3C-Validator)
-  * [JavaScript Validator](#JavaScript-Validator)
-  * [Lighthouse](#Lighthouse)
-* [MANUAL TESTING](#MANUAL-TESTING)
-  * [Testing User Stories](#Testing-User-Stories)
-  * [Full Testing](#Full-Testing)
+* [AUTOMATED TESTING](#automated-testing)
+  * [W3C Validator](#w3c-validator)
+  * [JavaScript Validator](#javascript-validator)
+  * [Lighthouse](#lighthouse)
+* [MANUAL TESTING](#manual-testing)
+  * [Testing User Stories](#testing-user-stories)
+  * [Full Testing](#full-testing)
 
 Testing was ongoing throughout the entire build. I utilised Chrome developer tools whilst building to pinpoint and troubleshoot any issues as I went along.
 
